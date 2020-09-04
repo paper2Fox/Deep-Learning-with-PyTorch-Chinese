@@ -6,6 +6,7 @@
     "-search",
     "search-pro",
     "-sharing",
+    "sharing-plus",
     "github-buttons",
     "editlink",
     "ga",
@@ -17,7 +18,8 @@
     "splitter",
     "todo",
     "copy-code-button",
-    "expandable-chapters-small"
+    "expandable-chapters-small",
+    "code"
   ],
   "pluginsConfig": {
     "search-pro": {
@@ -32,14 +34,14 @@
         "user": "paper2Fox",
         "repo": "Deep-Learning-with-PyTorch-Chinese",
         "type": "star",
-        "size": "small",
+        "size": "large",
         "count": true
       }]
     },
     "editlink": {
       "base": "https://github.com/paper2Fox/Deep-Learning-with-PyTorch-Chinese",
       "label": "Edit",
-      "multilingual": true
+      "multilingual": false
     },
     "ga": {
       "token": "UA-131910384-3"
@@ -61,6 +63,26 @@
     },
     "bibtex-indexed-cite": {
       "path": "/"
+    },
+    "code": {
+      "copyButtons": true
+    },
+    "sharing": {
+      "facebook": true,
+      "twitter": true,
+      "weibo": true,
+      "qq": true,
+      "all": [
+      "douban", 
+      "google", 
+      "instapaper", 
+      "linkedin", 
+      "twitter", 
+      "messenger", 
+      "qzone", 
+      "viber", 
+      "whatsapp"
+     ]
     }
   }
 }
