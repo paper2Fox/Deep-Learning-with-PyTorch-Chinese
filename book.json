@@ -39,7 +39,7 @@
     "editlink": {
       "base": "https://github.com/paper2Fox/Deep-Learning-with-PyTorch-Chinese",
       "label": "Edit",
-      "multilingual": false
+      "multilingual": true
     },
     "ga": {
       "token": "UA-131910384-3"
