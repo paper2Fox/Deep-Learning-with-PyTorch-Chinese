@@ -19,7 +19,8 @@
     "expandable-chapters-small",
     "code",
     "splitter",
-    "katex"
+    "katex",
+    "auto-scroll-table"
   ],
   "pluginsConfig": {
     "search-pro": {
