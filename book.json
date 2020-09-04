@@ -6,7 +6,6 @@
     "-search",
     "search-pro",
     "-sharing",
-    "sharing-plus",
     "github-buttons",
     "ga",
     "-highlight",
@@ -66,23 +65,6 @@
     },
     "code": {
       "copyButtons": true
-    },
-    "sharing": {
-      "facebook": true,
-      "twitter": true,
-      "weibo": true,
-      "qq": true,
-      "all": [
-      "douban", 
-      "google", 
-      "instapaper", 
-      "linkedin", 
-      "twitter", 
-      "messenger", 
-      "qzone", 
-      "viber", 
-      "whatsapp"
-     ]
     }
   }
 }
