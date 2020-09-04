@@ -1,0 +1,79 @@
+{
+  "title": "title",
+  "author": "",
+  "plugins": [
+    "-lunr",
+    "-search",
+    "search-pro",
+    "-sharing",
+    "disqus",
+    "github-buttons",
+    "editlink",
+    "ga",
+    "-highlight",
+    "prism",
+    "bibtex-indexed-cite",
+    "anchor-navigation-ex",
+    "page-footer-ex",
+    "splitter",
+    "todo",
+    "copy-code-button",
+    "expandable-chapters-small",
+    "donate"
+  ],
+  "pluginsConfig": {
+    "search-pro": {
+      "cutWordLib": "nodejieba",
+      "defineWord": ["Gitbook Use"]
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false
+    },
+    "disqus": {
+      "shortName": "gitbook-template"
+    },
+    "github-buttons": {
+      "buttons": [{
+        "user": "riskers",
+        "repo": "gitbook-template",
+        "type": "star",
+        "size": "small",
+        "count": true
+      }]
+    },
+    "editlink": {
+      "base": "https://github.com/riskers/gitbook-template/blob/master",
+      "label": "Edit",
+      "multilingual": false
+    },
+    "ga": {
+      "token": "UA-131910384-3"
+    },
+    "prism": {
+      "ignore": [
+        "mermaid",
+        "eval-js"
+      ],
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ]
+    },
+    "page-footer-ex": {
+      "copyright": "By [riskers](https://github.com/riskers)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布",
+      "markdown": true,
+      "update_label": "此页面修订于：",
+      "update_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "bibtex-indexed-cite": {
+      "path": "/"
+    },
+    "donate": {
+      "wechat": "https://riskers.github.io/gitbook-template/wechat.jpg",
+      "alipay": "https://riskers.github.io/gitbook-template/alipay.jpg",
+      "title": "",
+      "button": "赏",
+      "alipayText": "支付宝打赏",
+      "wechatText": "微信打赏"
+    }
+  }
+}
