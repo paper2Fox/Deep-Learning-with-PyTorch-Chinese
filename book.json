@@ -8,6 +8,7 @@
     "-sharing",
     "sharing-plus",
     "github-buttons",
+    "github",
     "editlink",
     "ga",
     "-highlight",
@@ -37,6 +38,9 @@
         "size": "large",
         "count": true
       }]
+    },
+    "github": {
+      "url":  "https://github.com/paper2Fox/Deep-Learning-with-PyTorch-Chinese"
     },
     "editlink": {
       "base": "https://github.com/paper2Fox/Deep-Learning-with-PyTorch-Chinese",
