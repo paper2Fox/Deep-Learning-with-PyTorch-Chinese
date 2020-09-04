@@ -6,7 +6,6 @@
     "-search",
     "search-pro",
     "-sharing",
-    "disqus",
     "github-buttons",
     "editlink",
     "ga",
@@ -28,20 +27,17 @@
     "anchor-navigation-ex": {
       "showLevel": false
     },
-    "disqus": {
-      "shortName": "gitbook-template"
-    },
     "github-buttons": {
       "buttons": [{
-        "user": "riskers",
-        "repo": "gitbook-template",
+        "user": "paper2Fox",
+        "repo": "Deep-Learning-with-PyTorch-Chinese",
         "type": "star",
         "size": "small",
         "count": true
       }]
     },
     "editlink": {
-      "base": "https://github.com/riskers/gitbook-template/blob/master",
+      "base": "https://github.com/paper2Fox/Deep-Learning-with-PyTorch-Chinese",
       "label": "Edit",
       "multilingual": false
     },
