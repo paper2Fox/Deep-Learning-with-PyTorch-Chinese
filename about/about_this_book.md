@@ -120,13 +120,13 @@ if __name__ == '__main__':
 
 书中的许多代码示例都使用两个空格缩进。由于打印的限制，代码清单被限制为80个字符的行，这对于大量缩进的代码段来说可能是不切实际的。使用两个空格缩进有助于减轻原本会出现的过度换行。这本书的所有可供下载的代码(同样，在https://www.manning.com/books/deep-learningwith-pytorch 和 https://github.com/deep-learning-with-pytorch/dlwpt-code) 上使用一致的四个空格缩进)。以a_t后缀命名的变量是存储在CPU内存中的张量，_g是GPU内存中的张量，_a是NumPy数组。
 
-本书中的许多代码样本都是以两格缩进的方式呈现的。由于印刷的局限性，代码列表每行被限制在80个字符内，这对于大量缩进的代码段来说可能不切实际。使用两个空格缩进有助于减轻原本会出现的过度换行问题。所有可供本书下载的代码（同样，在 https://www.manning.com/books/deep-learningwith-pytorch 和 https://github.com/deep-learning-with-pytorch/dlwpt-code）都使用了一致的四个空格缩进。以`_t`为后缀命名的变量是存储在CPU内存中的张量，`_g`是存储在GPU内存中的张量，`_a`是`NumPy`数组。
+本书中的许多代码样本都是以两格缩进的方式呈现的。由于印刷的局限性，代码列表每行被限制在80个字符内，这对于大量缩进的代码段来说可能不切实际。使用两个空格缩进有助于减轻原本会出现的过度换行问题。所有可供本书下载的代码(同样，在 https://www.manning.com/books/deep-learningwith-pytorch 和 https://github.com/deep-learning-with-pytorch/dlwpt-code)都使用了一致的四个空格缩进。以`_t`为后缀命名的变量是存储在CPU内存中的张量，`_g`是存储在GPU内存中的张量，`_a`是`NumPy`数组。
 
 ## 硬件和软件需求
 
 第1部分被设计为不需要任何特定的计算资源。任何最新的计算机或在线计算资源都是足够的。同样，也不需要特定的操作系统。在第2部分中，我们预计完成更高级示例的完整培训运行将需要支持一个支持CUDA的GPU。第2部分中使用的设备默认参数均假设GPU具有8 GB的RAM(我们建议使用NVIDIA GTX 1070或更高版本)，但是如果您的硬件可用的RAM较少，可以调整这些参数。第2部分的癌症检测项目所需的原始数据下载量约为60 GB，系统上总共需要200 GB(至少)可用磁盘空间用于训练模型。幸运的是，在线计算服务最近开始免费提供GPU时间。我们将在相应的章节中更详细地讨论计算需求。
 
-您需要Python 3.6或更高版本的版本；可在Python网站(https://www.python.org/downloads)上找到相关说明。有关 PyTorch的安装信息，请参阅 PyTorch 官方网站 (https://pytorch.org/get-started/locally) 上的入门指南。我们建议Windows用户使用Anaconda或Miniconda (https://www.anaconda.com/distribution 或 https://docs.conda.io/en/latest/miniconda.html) 进行安装。其他操作系统如Linux通常有更多的可行选项，`Pip`是Python最常用的包管理器。我们提供了一个requirements.txt文件，`Pip`可以用它来处理Python的依赖需求。由于目前的苹果笔记本电脑不包含支持CUDA的GPU，因此PyTorch的macOS预编译包只支持CPU。当然，有经验的用户可以自由地以最符合您首选开发环境的方式安装软件包。
+您需要Python 3.6或更高版本的版本；可在Python网站(https://www.python.org/downloads) 上找到相关说明。有关 PyTorch的安装信息，请参阅 PyTorch 官方网站 (https://pytorch.org/get-started/locally) 上的入门指南。我们建议Windows用户使用Anaconda或Miniconda (https://www.anaconda.com/distribution 或 https://docs.conda.io/en/latest/miniconda.html) 进行安装。其他操作系统如Linux通常有更多的可行选项，`Pip`是Python最常用的包管理器。我们提供了一个requirements.txt文件，`Pip`可以用它来处理Python的依赖需求。由于目前的苹果笔记本电脑不包含支持CUDA的GPU，因此PyTorch的macOS预编译包只支持CPU。当然，有经验的用户可以自由地以最符合您首选开发环境的方式安装软件包。
 
 ## liveBook论坛
 
