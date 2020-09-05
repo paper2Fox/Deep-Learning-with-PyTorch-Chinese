@@ -17,7 +17,6 @@
     "todo",
     "copy-code-button",
     "expandable-chapters-small",
-    "code",
     "splitter",
     "katex",
     "auto-scroll-table"
@@ -63,9 +62,6 @@
     },
     "bibtex-indexed-cite": {
       "path": "/"
-    },
-    "code": {
-      "copyButtons": false
     }
   }
 }

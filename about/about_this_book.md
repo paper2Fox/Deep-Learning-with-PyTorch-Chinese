@@ -52,7 +52,7 @@ ___
 
 ## 关于代码
 
-本书中的所有代码都是为Python 3.6或更高版本编写的。 该书的代码可从Manning的网站(www.manning.com/books/deep-learning-with-pytorch)和GitHub(https://github.com/deep-learning-withpytorch/dlwpt-code)下载。版本3.6.8是撰写本文时的最新版本，也是我们用来测试本书中示例的版本。 例如：
+本书中的所有代码都是为Python 3.6或更高版本编写的。该书的代码可从Manning的网站(https://www.manning.com/books/deep-learning-with-pytorch) 和GitHub(https://github.com/deep-learning-withpytorch/dlwpt-code) 下载。版本3.6.8是撰写本文时的最新版本，也是我们用来测试本书中示例的版本。 例如：
 
 ```python
 $ python
@@ -118,9 +118,9 @@ if __name__ == '__main__':
     main()
 ```
 
-书中的许多代码示例都使用两个空格缩进。由于打印的限制，代码清单被限制为80个字符的行，这对于大量缩进的代码段来说可能是不切实际的。使用两个空格缩进有助于减轻原本会出现的过度换行。这本书的所有可供下载的代码(同样，在www.manning.com/books/deep-learningwith-pytorch和https://github.com/deep-learning-with-pytorch/dlwpt-code)上使用一致的四个空格缩进)。以a_t后缀命名的变量是存储在CPU内存中的张量，_g是GPU内存中的张量，_a是NumPy数组。
+书中的许多代码示例都使用两个空格缩进。由于打印的限制，代码清单被限制为80个字符的行，这对于大量缩进的代码段来说可能是不切实际的。使用两个空格缩进有助于减轻原本会出现的过度换行。这本书的所有可供下载的代码(同样，在https://www.manning.com/books/deep-learningwith-pytorch 和 https://github.com/deep-learning-with-pytorch/dlwpt-code) 上使用一致的四个空格缩进)。以a_t后缀命名的变量是存储在CPU内存中的张量，_g是GPU内存中的张量，_a是NumPy数组。
 
-本书中的许多代码样本都是以两格缩进的方式呈现的。由于印刷的局限性，代码列表每行被限制在80个字符内，这对于大量缩进的代码段来说可能不切实际。使用两个空格缩进有助于减轻原本会出现的过度换行问题。所有可供本书下载的代码（同样，在 www.manning.com/books/deep-learningwith-pytorch 和 https://github.com/deep-learning-with-pytorch/dlwpt-code ）都使用了一致的四个空格缩进。以`_t`为后缀命名的变量是存储在CPU内存中的张量，`_g`是存储在GPU内存中的张量，`_a`是`NumPy`数组。
+本书中的许多代码样本都是以两格缩进的方式呈现的。由于印刷的局限性，代码列表每行被限制在80个字符内，这对于大量缩进的代码段来说可能不切实际。使用两个空格缩进有助于减轻原本会出现的过度换行问题。所有可供本书下载的代码（同样，在 https://www.manning.com/books/deep-learningwith-pytorch 和 https://github.com/deep-learning-with-pytorch/dlwpt-code）都使用了一致的四个空格缩进。以`_t`为后缀命名的变量是存储在CPU内存中的张量，`_g`是存储在GPU内存中的张量，`_a`是`NumPy`数组。
 
 ## 硬件和软件需求
 
