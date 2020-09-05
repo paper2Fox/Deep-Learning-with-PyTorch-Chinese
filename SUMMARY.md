@@ -6,8 +6,8 @@
 * [关于作者](about/about_the_authors.md)
 * [关于封面](about/about_the_cover_illustration.md)
 
-* [Part 1 核心PyTorch](Part/1.md)
-* [1. 深度学习和PyTorch库简介](./Chapter1/1.0.md)
+* [Part 1 核心PyTorch](./Chapter1/1.0.md)
+* [1. 深度学习和PyTorch库简介](./Chapter1/1.1.md)
     * [1.1 深度学习革命](./Chapter1/1.1.md#chap1-1)
     * [1.2 深度学习：PyTorch](./Chapter1/1.1.md#chap1-2)
     * [1.3 为什么使用深度学习](./Chapter1/1.1.md#chap1-3) 
