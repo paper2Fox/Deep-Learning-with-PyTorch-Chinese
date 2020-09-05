@@ -13,9 +13,9 @@
 
 ## 本书的组织结构：路线图
 
-《深度学习与PyTorch》分为三个不同的部分。第1部分涵盖了基础知识，而第2部分在第1部分介绍的基本概念的基础上，加入更多高级概念，引导您完成一个端到端项目。简短的第3部分则以了解PyTorch提供的部署功能来结束本书。您可能会注意到各部分之间存在不同的语言和图片风格。尽管本书是无休止地协作规划、讨论和编辑的结果，但写作和绘制图片的工作却是由各位作者分担完成的。Luca主要负责第1部分，Eli负责第2部分^2^，Thomas则试图将第3部分的风格与前两部分相融合。与其追求最低限度的统一性，我们决定保留各部分特有的原貌。
+《深度学习与PyTorch》分为三个不同的部分。第1部分涵盖了基础知识，而第2部分在第1部分介绍的基本概念的基础上，加入更多高级概念，引导您完成一个端到端项目。简短的第3部分则以了解PyTorch提供的部署功能来结束本书。您可能会注意到各部分之间存在不同的语言和图片风格。尽管本书是无休止地协作规划、讨论和编辑的结果，但写作和绘制图片的工作却是由各位作者分担完成的。Luca主要负责第1部分，Eli负责第2部分<sup>2</sup>，Thomas则试图将第3部分的风格与前两部分相融合。与其追求最低限度的统一性，我们决定保留各部分特有的原貌。
 ___
-^2^ Eli和Thomas的一些艺术作品出现在了其他部分；如果您发现在某个章节中，风格改变了，不要感到震惊！
+<sup>2</sup> Eli和Thomas的一些艺术作品出现在了其他部分；如果您发现在某个章节中，风格改变了，不要感到震惊！
 ___
 
 &nbsp;&nbsp;&nbsp;&nbsp;以下是各部分的分解，并简要介绍了各部分。
@@ -29,7 +29,7 @@ ___
 第3章介绍了PyTorch的基本构件--张量，展示了它的API，并在介绍了一些幕后的实现细节。
 第4章演示了如何将不同类型的数据表示为张量，以及深度学习模型对张量形状的预期。
 第5章介绍了通过梯度下降进行学习的机制，以及PyTorch如何使其实现自动微分功能。
-第6章展示了在PyTorch中使用**nn**和**optim**模块构建和训练回归神经网络的过程。
+第6章展示了在PyTorch中使用`nn`和`optim`模块构建和训练回归神经网络的过程。
 第7章在上一章的基础上，创建一个用于图像分类的全连接模型，并扩展PyTorch API的知识。
 第8章介绍了卷积神经网络，并扩展了用于构建神经网络模型及其PyTorch实现的更多高级概念。
 
@@ -126,20 +126,12 @@ if __name__ == '__main__':
 
 第1部分被设计为不需要任何特定的计算资源。任何最新的计算机或在线计算资源都是足够的。同样，也不需要特定的操作系统。在第2部分中，我们预计完成更高级示例的完整培训运行将需要支持一个支持CUDA的GPU。第2部分中使用的设备默认参数均假设GPU具有8 GB的RAM(我们建议使用NVIDIA GTX 1070或更高版本)，但是如果您的硬件可用的RAM较少，可以调整这些参数。第2部分的癌症检测项目所需的原始数据下载量约为60 GB，系统上总共需要200 GB(至少)可用磁盘空间用于训练模型。幸运的是，在线计算服务最近开始免费提供GPU时间。我们将在相应的章节中更详细地讨论计算需求。
 
-您需要Python 3.6或更高版本的版本；可在Python网站(www.python.org/downloads)上找到相关说明。有关 PyTorch的安装信息，请参阅 PyTorch 官方网站(https://pytorch.org/get-started/locally)上的入门指南。我们建议Windows用户使用Anaconda或Miniconda(https://www.anaconda.com/distribution 或 https://docs.conda.io/en/latest/miniconda.html)进行安装。其他操作系统如Linux通常有更多的可行选项，`Pip`是Python最常用的包管理器。我们提供了一个requirements.txt文件，`Pip`可以用它来处理Python的依赖需求。由于目前的苹果笔记本电脑不包含支持CUDA的GPU，因此PyTorch的macOS预编译包只支持CPU。当然，有经验的用户可以自由地以最符合您首选开发环境的方式安装软件包。
+您需要Python 3.6或更高版本的版本；可在Python网站(https://www.python.org/downloads)上找到相关说明。有关 PyTorch的安装信息，请参阅 PyTorch 官方网站 (https://pytorch.org/get-started/locally) 上的入门指南。我们建议Windows用户使用Anaconda或Miniconda (https://www.anaconda.com/distribution 或 https://docs.conda.io/en/latest/miniconda.html) 进行安装。其他操作系统如Linux通常有更多的可行选项，`Pip`是Python最常用的包管理器。我们提供了一个requirements.txt文件，`Pip`可以用它来处理Python的依赖需求。由于目前的苹果笔记本电脑不包含支持CUDA的GPU，因此PyTorch的macOS预编译包只支持CPU。当然，有经验的用户可以自由地以最符合您首选开发环境的方式安装软件包。
 
 ## liveBook论坛
-
-购买使用PyTorch的深度学习包括免费访问由Manning Publications运营的私人网络论坛，在那里您可以对书发表评论，询问技术问题，并从作者和其他用户那里获得帮助。
-要访问论坛，请转到https://livebook.manning.com/#！/book/deep-learning-with-pytorch/讨论。
-你可以在https://livebook.manning.com/#！/讨论上了解更多关于曼宁的论坛和行为规则。
-曼宁对我们的读者的承诺是提供一个场所，在这里，个人读者之间以及读者和作者之间可以进行有意义的对话。
-这并不是对作者参与任何具体数量的承诺，他们对论坛的贡献仍然是自愿的(和无偿的)。
-我们建议你试着问他们一些有挑战性的问题，以免他们的兴趣偏离！
-只要这本书还在印刷，论坛和以前讨论的档案就可以从出版商的网站上获得。
 
 购买《深度学习与PyTorch》包括免费访问由Manning Publications运营的私人网络论坛，您可以在该论坛上对本书发表评论，提出技术问题，并从作者和其他用户那里获得帮助。要访问该论坛，请访问 https://livebook.manning.com/#！/book/deep-learning-with-pytorch/discussion 。您可以在 https://livebook.manning.com/#！/discussion 了解更多关于Manning论坛和行为规则的信息。Manning对读者承诺提供一个场所，让个人读者之间和读者与作者之间可以进行有意义的对话。这不是对作者的任何具体参与量的承诺，他们对论坛的贡献仍然是自愿的（且无偿的）。我们建议您尝试向他们提出一些具有挑战性的问题，以免他们失去兴趣。只要该书还在印刷，就可以从出版商的网站上访问论坛并获得以前讨论的存档。
 
 ## 其他在线资源
 
-虽然这本书没有假设读者需要具备深度学习的先验知识，但它没有包括深度学习的基础介绍。我们涵盖了基础知识，但我们的重点是熟练使用PyTorch库。我们鼓励感兴趣的读者在阅读本书之前、期间或之后建立起对深度学习的直观理解。为此，*Grokking Deep Learning*(www.manning.com/books/grokking-deep-learning)是一本很好的资源，它可以帮助我们对深度神经网络的基础机制建立起强大的心理模型和直觉理解。要想获得全面的介绍和参考，我们建议您阅读Goodfellow et al.的*Deep Learning* (www.deeplearningbook.org)。当然，Manning Publications也具有大量的深度学习书目(www.manning.com/CATALOG#SECTION-83)，涵盖了该领域的各种主题。根据您的兴趣，它们中的许多都值得成为您阅读的下一本书。
+虽然这本书没有假设读者需要具备深度学习的先验知识，但它没有包括深度学习的基础介绍。我们涵盖了基础知识，但我们的重点是熟练使用PyTorch库。我们鼓励感兴趣的读者在阅读本书之前、期间或之后建立起对深度学习的直观理解。为此，*Grokking Deep Learning* (www.manning.com/books/grokking-deep-learning) 是一本很好的资源，它可以帮助我们对深度神经网络的基础机制建立起强大的心理模型和直觉理解。要想获得全面的介绍和参考，我们建议您阅读Goodfellow et al.的*Deep Learning* (www.deeplearningbook.org)。当然，Manning Publications也具有大量的深度学习书目(www.manning.com/CATALOG#SECTION-83)，涵盖了该领域的各种主题。根据您的兴趣，它们中的许多都值得成为您阅读的下一本书。

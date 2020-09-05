@@ -65,7 +65,7 @@
       "path": "/"
     },
     "code": {
-      "copyButtons": true
+      "copyButtons": false
     }
   }
 }
