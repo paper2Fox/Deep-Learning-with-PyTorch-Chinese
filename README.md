@@ -1,5 +1,5 @@
 # Deep-Learning-with-PyTorch-Chinese 
-# 深度学习与PyTorch（中文版）
+# 深度学习与PyTorch（中文版）-paper2Fox
 
 **特别鸣谢**：本项目受[ShusenTang](https://github.com/ShusenTang/Deep-Learning-with-PyTorch-Chinese)的开源项目（基本摘要版）启发而进行，旨在**完成对完整版书籍的翻译**。
 
@@ -13,7 +13,7 @@
 </div>
 
 ## 1. 书籍简介
-自 2016 年诞生以来，PyTorch 已经成为当今最火热的深度学习框架之一。最近，官方权威的 PyTorch 教程书《Deep learning with PyTorch》终于问世了，消息一出就获得巨佬 Yann LeCun 力荐，是入门PyTorch及深度学习的绝佳教材。
+自 2016 年诞生以来，PyTorch 已经成为当今最火热的深度学习框架之一。最近，官方权威的 PyTorch 教程书《Deep learning with PyTorch》终于问世了，消息一出就获得巨佬 Yann LeCun 力荐，是入门PyTorch及深度学习的绝佳教材。作者：**ELI STEVENS, LUCA ANTIGA, AND THOMAS VIEHMANN**
 <div align=center>
 <img width="350" src="img/twitter.png" alt="twitter"/>
 </div>
@@ -51,6 +51,7 @@
 
 本[仓库](https://github.com/paper2Fox/Deep-Learning-with-PyTorch-Chinese)的master分支将提供markdown格式的中文翻译，后续会推出可供下载的版本。目前暂时仅提供**Gitbook在线预览**。
 
+**在线预览：**
 ## https://paper2fox.github.io/Deep-Learning-with-PyTorch-Chinese/
 
 欢迎对本项目做出贡献或提出issue。
