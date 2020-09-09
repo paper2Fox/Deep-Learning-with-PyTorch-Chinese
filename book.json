@@ -1,6 +1,6 @@
 {
-  "title": "title",
-  "author": "",
+  "title": "深度学习与PyTorch（中文版）",
+  "author": "译者：paper2Fox",
   "plugins": [
     "-lunr",
     "-search",

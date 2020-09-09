@@ -80,6 +80,22 @@
     * [2.5 结论](./Chapter2/2.1.md#chap2-5)
     * [2.6 练习](./Chapter2/2.1.md#chap2-6)
     * [2.7 小结](./Chapter2/2.1.md#chap2-7)
+* [3. 从张量开始](./Chapter3/3.1.md)     
+    * [3.1 浮点数世界](./Chapter3/3.1.md#chap3-1)
+    * [3.2 张量：多维数组](./Chapter3/3.1.md#chap3-2)
+    * [3.3 索引张量](./Chapter3/3.1.md#chap3-3)
+    * [3.4 命名张量](./Chapter3/3.1.md#chap3-4)
+    * [3.5 张量元素类型](./Chapter3/3.1.md#chap3-5)
+    * [3.6 张量API](./Chapter3/3.1.md#chap3-6)
+    * [3.7 张量：存储的风景](./Chapter3/3.1.md#chap3-7)
+    * [3.8 张量元数据：尺寸、偏移和步长](./Chapter3/3.1.md#chap3-8)
+    * [3.9 移动张量至GPU](./Chapter3/3.1.md#chap3-9)
+    * [3.10 NumPy互操作性](./Chapter3/3.1.md#chap3-10)
+    * [3.11 广义张量也是张量](./Chapter3/3.1.md#chap3-11)
+    * [3.12 序列化张量](./Chapter3/3.1.md#chap3-12)
+    * [3.13 结论](./Chapter3/3.1.md#chap3-13)
+    * [3.14 练习](./Chapter3/3.1.md#chap3-14)
+    * [3.15 小结](./Chapter3/3.1.md#chap3-15)
 
 **未完待续**
 
