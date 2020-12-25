@@ -3,7 +3,7 @@
 
 **特别鸣谢**：本项目受[ShusenTang](https://github.com/ShusenTang/Deep-Learning-with-PyTorch-Chinese)的开源项目（基本摘要版）启发而进行，旨在**完成对完整版书籍的翻译**。
 
-本项目（[链接](https://github.com/paper2Fox/Deep-Learning-with-PyTorch-Chinese)）预计将PyTorch官方书籍[《Deep learning with PyTorch》](https://pytorch.org/deep-learning-with-pytorch)翻译成中文。目前该书在PyTorch官网可以免费领取（[传送门](https://pytorch.org/deep-learning-with-pytorch)）,也可以在Manning订购正版（[传送门](https://www.manning.com/books/deep-learning-with-pytorch)）。
+本项目（[链接](https://github.com/paper2Fox/Deep-Learning-with-PyTorch-Chinese)）预计将PyTorch官方书籍[《Deep learning with PyTorch》](https://pytorch.org/deep-learning-with-pytorch)翻译成中文。目前该书在PyTorch官网可以免费领取（[传送门](https://pytorch.org/assets/deep-learning/Deep-Learning-with-PyTorch.pdf)）,也可以在Manning订购正版（[传送门](https://www.manning.com/books/deep-learning-with-pytorch)）。
 
 [This project](https://github.com/paper2Fox/Deep-Learning-with-PyTorch-Chinese) aims to translate the PyTorch official book ***Deep learning with PyTorch*** into Chinese.
 
@@ -18,7 +18,7 @@
 <img width="350" src="img/twitter.png" alt="twitter"/>
 </div>
 
-目前，[PyTorch官网提供的PDF](https://pytorch.org/deep-learning-with-pytorch)已经是**2020年7月正式出版**的完整版，共**522**页，内容共包括以下三大部分：
+目前，[PyTorch官网提供的PDF](https://pytorch.org/assets/deep-learning/Deep-Learning-with-PyTorch.pdf)已经是**2020年7月正式出版**的完整版，共**522**页，内容共包括以下三大部分：
 
 1. 核心PyTorch（第1-8章）
 2. 从现实世界中的图像中学习：肺癌的早期发现（第9-14章）
