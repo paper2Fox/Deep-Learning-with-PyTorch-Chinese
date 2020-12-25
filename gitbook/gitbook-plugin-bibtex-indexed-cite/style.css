@@ -1,0 +1,10 @@
+.references td:first-child {
+  width: 50px;
+}
+.references td {
+  border: none !important;
+  vertical-align: top;
+}
+.references tr {
+  border: none !important;
+}

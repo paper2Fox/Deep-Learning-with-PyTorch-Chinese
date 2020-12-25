@@ -1,0 +1,1507 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3. 从张量开始 · 深度学习与PyTorch（中文版）</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="译者：paper2Fox">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.1.html" />
+    
+    
+    <link rel="prev" href="../Chapter2/2.1.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"paper2Fox","repo":"Deep-Learning-with-PyTorch-Chinese","type":["star","watch","fork"],"size":"large","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../about/about_this_book.html">
+            
+                <a href="../about/about_this_book.html">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../about/about_the_authors.html">
+            
+                <a href="../about/about_the_authors.html">
+            
+                    
+                    关于作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../about/about_the_cover_illustration.html">
+            
+                <a href="../about/about_the_cover_illustration.html">
+            
+                    
+                    关于封面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Chapter1/1.0.html">
+            
+                <a href="../Chapter1/1.0.html">
+            
+                    
+                    Part 1 核心PyTorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter1/1.1.html">
+            
+                <a href="../Chapter1/1.1.html">
+            
+                    
+                    1. 深度学习和PyTorch库简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter1/1.1.html">
+            
+                <a href="../Chapter1/1.1.html#chap1-1">
+            
+                    
+                    1.1 深度学习革命
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter1/1.1.html">
+            
+                <a href="../Chapter1/1.1.html#chap1-2">
+            
+                    
+                    1.2 深度学习：PyTorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter1/1.1.html">
+            
+                <a href="../Chapter1/1.1.html#chap1-3">
+            
+                    
+                    1.3 为什么使用深度学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter1/1.1.html">
+            
+                <a href="../Chapter1/1.1.html#chap1-4">
+            
+                    
+                    1.4 概述PyTorch如何支持深度学习项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter1/1.1.html">
+            
+                <a href="../Chapter1/1.1.html#chap1-5">
+            
+                    
+                    1.5 硬件和软件要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter1/1.1.html">
+            
+                <a href="../Chapter1/1.1.html#chap1-6">
+            
+                    
+                    1.6 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter1/1.1.html">
+            
+                <a href="../Chapter1/1.1.html#chap1-7">
+            
+                    
+                    1.7 小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html">
+            
+                    
+                    2. 预训练网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-1">
+            
+                    
+                    2.1 一种可识别图像主体的预训练网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-2">
+            
+                    
+                    2.2 一种从伪到真的预训练模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-3">
+            
+                    
+                    2.3 一种描述场景的预训练网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-4">
+            
+                    
+                    2.4 Torch Hub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-5">
+            
+                    
+                    2.5 结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-6">
+            
+                    
+                    2.6 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-7">
+            
+                    
+                    2.7 小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="3.1.html">
+            
+                <a href="3.1.html">
+            
+                    
+                    3. 从张量开始
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-1">
+            
+                    
+                    3.1 浮点数世界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-2">
+            
+                    
+                    3.2 张量：多维数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-3">
+            
+                    
+                    3.3 索引张量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-4">
+            
+                    
+                    3.4 命名张量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-5">
+            
+                    
+                    3.5 张量元素类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-6">
+            
+                    
+                    3.6 张量API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-7">
+            
+                    
+                    3.7 张量：存储的风景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-8">
+            
+                    
+                    3.8 张量元数据：尺寸、偏移和步长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-9">
+            
+                    
+                    3.9 移动张量至GPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-10">
+            
+                    
+                    3.10 NumPy互操作性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-11">
+            
+                    
+                    3.11 广义张量也是张量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-12">
+            
+                    
+                    3.12 序列化张量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-13">
+            
+                    
+                    3.13 结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-14">
+            
+                    
+                    3.14 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="3.1.html">
+            
+                <a href="3.1.html#chap3-15">
+            
+                    
+                    3.15 小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3. 从张量开始</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#3-&#x4ECE;&#x5F20;&#x91CF;&#x5F00;&#x59CB;"><b></b>3. &#x4ECE;&#x5F20;&#x91CF;&#x5F00;&#x59CB;</a></li><ul><li><span class="title-icon "></span><a href="#31-&#x6D6E;&#x70B9;&#x6570;&#x4E16;&#x754C;"><b></b>3.1 &#x6D6E;&#x70B9;&#x6570;&#x4E16;&#x754C;</a></li><li><span class="title-icon "></span><a href="#32-&#x5F20;&#x91CF;&#xFF1A;&#x591A;&#x7EF4;&#x6570;&#x7EC4;"><b></b>3.2 &#x5F20;&#x91CF;&#xFF1A;&#x591A;&#x7EF4;&#x6570;&#x7EC4;</a></li><ul><li><span class="title-icon "></span><a href="#321-&#x4ECE;python&#x5217;&#x8868;&#x5230;pytorch&#x5F20;&#x91CF;"><b></b>3.2.1 &#x4ECE;Python&#x5217;&#x8868;&#x5230;PyTorch&#x5F20;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#322-&#x6784;&#x5EFA;&#x6211;&#x4EEC;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;"><b></b>3.2.2 &#x6784;&#x5EFA;&#x6211;&#x4EEC;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;</a></li></ul><li><span class="title-icon "></span><a href="#323-&#x5F20;&#x91CF;&#x7684;&#x672C;&#x8D28;"><b></b>3.2.3 &#x5F20;&#x91CF;&#x7684;&#x672C;&#x8D28;</a></li><li><span class="title-icon "></span><a href="#33-&#x7D22;&#x5F15;&#x5F20;&#x91CF;"><b></b>3.3 &#x7D22;&#x5F15;&#x5F20;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#34-&#x547D;&#x540D;&#x5F20;&#x91CF;"><b></b>3.4 &#x547D;&#x540D;&#x5F20;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#35-&#x5F20;&#x91CF;&#x5143;&#x7D20;&#x7C7B;&#x578B;"><b></b>3.5 &#x5F20;&#x91CF;&#x5143;&#x7D20;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#351-&#x4F7F;&#x7528;dtype&#x6307;&#x5B9A;&#x6570;&#x503C;&#x7C7B;&#x578B;"><b></b>3.5.1 &#x4F7F;&#x7528;dtype&#x6307;&#x5B9A;&#x6570;&#x503C;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#352-&#x9002;&#x5408;&#x5404;&#x79CD;&#x573A;&#x5408;&#x7684;dtype"><b></b>3.5.2 &#x9002;&#x5408;&#x5404;&#x79CD;&#x573A;&#x5408;&#x7684;dtype</a></li><li><span class="title-icon "></span><a href="#353-&#x7BA1;&#x7406;&#x5F20;&#x91CF;&#x7684;dtype&#x5C5E;&#x6027;"><b></b>3.5.3 &#x7BA1;&#x7406;&#x5F20;&#x91CF;&#x7684;dtype&#x5C5E;&#x6027;</a></li></ul><li><span class="title-icon "></span><a href="#36-&#x5F20;&#x91CF;api"><b></b>3.6 &#x5F20;&#x91CF;API</a></li><li><span class="title-icon "></span><a href="#37-&#x5F20;&#x91CF;&#xFF1A;&#x5BF9;&#x5B58;&#x50A8;&#x7684;&#x56FE;&#x5F62;&#x5316;"><b></b>3.7 &#x5F20;&#x91CF;&#xFF1A;&#x5BF9;&#x5B58;&#x50A8;&#x7684;&#x56FE;&#x5F62;&#x5316;</a></li><ul><li><span class="title-icon "></span><a href="#371-&#x7D22;&#x5F15;&#x5230;&#x5B58;&#x50A8;"><b></b>3.7.1 &#x7D22;&#x5F15;&#x5230;&#x5B58;&#x50A8;</a></li><li><span class="title-icon "></span><a href="#372-&#x4FEE;&#x6539;&#x5B58;&#x50A8;&#x7684;&#x503C;&#xFF1A;&#x5C31;&#x5730;&#x64CD;&#x4F5C;&#xFF08;in-place-operations"><b></b>3.7.2 &#x4FEE;&#x6539;&#x5B58;&#x50A8;&#x7684;&#x503C;&#xFF1A;&#x5C31;&#x5730;&#x64CD;&#x4F5C;&#xFF08;In-place operations)</a></li></ul><li><span class="title-icon "></span><a href="#38-&#x5F20;&#x91CF;&#x5143;&#x6570;&#x636E;&#xFF1A;&#x5927;&#x5C0F;size&#x3001;&#x504F;&#x79FB;offset&#x548C;&#x6B65;&#x957F;stride"><b></b>3.8 &#x5F20;&#x91CF;&#x5143;&#x6570;&#x636E;&#xFF1A;&#x5927;&#x5C0F;(size)&#x3001;&#x504F;&#x79FB;(offset)&#x548C;&#x6B65;&#x957F;(stride)</a></li><ul><li><span class="title-icon "></span><a href="#381-&#x53E6;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x7684;&#x5B58;&#x50A8;&#x89C6;&#x56FE;"><b></b>3.8.1 &#x53E6;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x7684;&#x5B58;&#x50A8;&#x89C6;&#x56FE;</a></li><li><span class="title-icon "></span><a href="#382-&#x65E0;&#x9700;&#x590D;&#x5236;&#x7684;&#x8F6C;&#x7F6E;"><b></b>3.8.2 &#x65E0;&#x9700;&#x590D;&#x5236;&#x7684;&#x8F6C;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#383-&#x5728;&#x66F4;&#x9AD8;&#x7684;&#x7EF4;&#x5EA6;&#x4E0A;&#x8FDB;&#x884C;&#x8F6C;&#x7F6E;"><b></b>3.8.3 &#x5728;&#x66F4;&#x9AD8;&#x7684;&#x7EF4;&#x5EA6;&#x4E0A;&#x8FDB;&#x884C;&#x8F6C;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#384-&#x8FDE;&#x7EED;&#x5F20;&#x91CF;&#xFF08;contiguous-tensors&#xFF09;"><b></b>3.8.4 &#x8FDE;&#x7EED;&#x5F20;&#x91CF;&#xFF08;contiguous tensors&#xFF09;</a></li></ul><li><span class="title-icon "></span><a href="#39-&#x79FB;&#x52A8;&#x5F20;&#x91CF;&#x81F3;gpu"><b></b>3.9 &#x79FB;&#x52A8;&#x5F20;&#x91CF;&#x81F3;GPU</a></li><li><span class="title-icon "></span><a href="#310-numpy&#x4E92;&#x64CD;&#x4F5C;&#x6027;"><b></b>3.10 NumPy&#x4E92;&#x64CD;&#x4F5C;&#x6027;</a></li><li><span class="title-icon "></span><a href="#311-&#x5E7F;&#x4E49;&#x5F20;&#x91CF;&#x4E5F;&#x662F;&#x5F20;&#x91CF;"><b></b>3.11 &#x5E7F;&#x4E49;&#x5F20;&#x91CF;&#x4E5F;&#x662F;&#x5F20;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#312-&#x5E8F;&#x5217;&#x5316;&#x5F20;&#x91CF;"><b></b>3.12 &#x5E8F;&#x5217;&#x5316;&#x5F20;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#313-&#x7ED3;&#x8BBA;"><b></b>3.13 &#x7ED3;&#x8BBA;</a></li><li><span class="title-icon "></span><a href="#314-&#x7EC3;&#x4E60;"><b></b>3.14 &#x7EC3;&#x4E60;</a></li><li><span class="title-icon "></span><a href="#315-&#x5C0F;&#x7ED3;"><b></b>3.15 &#x5C0F;&#x7ED3;</a></li></ul></ul></div><a href="#3-&#x4ECE;&#x5F20;&#x91CF;&#x5F00;&#x59CB;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="3-&#x4ECE;&#x5F20;&#x91CF;&#x5F00;&#x59CB;"><a name="3-&#x4ECE;&#x5F20;&#x91CF;&#x5F00;&#x59CB;" class="anchor-navigation-ex-anchor" href="#3-&#x4ECE;&#x5F20;&#x91CF;&#x5F00;&#x59CB;"><i class="fa fa-link" aria-hidden="true"></i></a><p align="right">3. &#x4ECE;&#x5F20;&#x91CF;&#x5F00;&#x59CB;</p></h1>
+<hr>
+<blockquote>
+<p>&#x672C;&#x7AE0;&#x5305;&#x62EC;&#xFF1A;<br>&#x2003;&#x2003;- &#x7406;&#x89E3;&#x5F20;&#x91CF;--PyTorch&#x4E2D;&#x7684;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7ED3;&#x6784;<br>&#x2003;&#x2003;- &#x5F20;&#x91CF;&#x7684;&#x7D22;&#x5F15;&#x548C;&#x8FD0;&#x7B97;<br>&#x2003;&#x2003;- &#x4E0E;NumPy&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x4E92;&#x64CD;&#x4F5C;<br>&#x2003;&#x2003;- &#x5C06;&#x8BA1;&#x7B97;&#x8F6C;&#x79FB;&#x5230;GPU&#x4E0A;&#x4EE5;&#x63D0;&#x9AD8;&#x901F;&#x5EA6; </p>
+</blockquote>
+<p>&#x2003;&#x2003;&#x5728;&#x4E0A;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x4E86;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6240;&#x5B9E;&#x73B0;&#x7684;&#x4F17;&#x591A;&#x5E94;&#x7528;&#x4E2D;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x5B83;&#x4EEC;&#x65E0;&#x4E00;&#x4F8B;&#x5916;&#x5730;&#x5305;&#x62EC;&#x83B7;&#x53D6;&#x67D0;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x6570;&#x636E;(&#x5982;&#x56FE;&#x50CF;&#x6216;&#x6587;&#x672C;)&#xFF0C;&#x5E76;&#x4EA7;&#x751F;&#x53E6;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x6570;&#x636E;(&#x5982;&#x6807;&#x7B7E;&#x3001;&#x6570;&#x5B57;&#x6216;&#x66F4;&#x591A;&#x56FE;&#x50CF;&#x3001;&#x6587;&#x672C;)&#x3002;&#x4ECE;&#x8FD9;&#x4E2A;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF0C;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x5C06;&#x6570;&#x636E;&#x4ECE;&#x4E00;&#x79CD;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x8F6C;&#x5316;&#x4E3A;&#x53E6;&#x4E00;&#x79CD;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x7684;&#x7CFB;&#x7EDF;&#x3002;&#x8FD9;&#x79CD;&#x8F6C;&#x6362;&#x662F;&#x901A;&#x8FC7;&#x4ECE;&#x4E00;&#x7CFB;&#x5217;&#x5C55;&#x793A;&#x6240;&#x9700;&#x6620;&#x5C04;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x63D0;&#x53D6;&#x5171;&#x6027;&#x6765;&#x9A71;&#x52A8;&#x7684;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x7CFB;&#x7EDF;&#x53EF;&#x80FD;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x72D7;&#x7684;&#x4E00;&#x822C;&#x5F62;&#x72B6;&#x548C;&#x91D1;&#x6BDB;&#x72AC;&#x7684;&#x5178;&#x578B;&#x989C;&#x8272;&#x3002;&#x901A;&#x8FC7;&#x7ED3;&#x5408;&#x8FD9;&#x4E24;&#x79CD;&#x56FE;&#x50CF;&#x5C5E;&#x6027;&#xFF0C;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x5C06;&#x5177;&#x6709;&#x7ED9;&#x5B9A;&#x5F62;&#x72B6;&#x548C;&#x989C;&#x8272;&#x7684;&#x56FE;&#x50CF;&#x6B63;&#x786E;&#x5730;&#x6620;&#x5C04;&#x5230;<strong>&#x91D1;&#x6BDB;&#x72AC;</strong>&#x6807;&#x7B7E;&#x4E0A;&#xFF0C;&#x800C;&#x4E0D;&#x662F;<strong>&#x9ED1;&#x8272;&#x7684;&#x5B9E;&#x9A8C;&#x5BA4;</strong>(&#x6216;&#x5C31;&#x6B64;&#x800C;&#x8A00;&#xFF0C;&#x9EC4;&#x8910;&#x8272;&#x7684;&#x5C71;&#x732B;&#x732B;)&#x3002;&#x7531;&#x6B64;&#x4EA7;&#x751F;&#x7684;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x6D88;&#x8017;&#x5927;&#x91CF;&#x7684;&#x7C7B;&#x4F3C;&#x8F93;&#x5165;&#xFF0C;&#x5E76;&#x4E3A;&#x8FD9;&#x4E9B;&#x8F93;&#x5165;&#x4EA7;&#x751F;&#x6709;&#x610F;&#x4E49;&#x7684;&#x8F93;&#x51FA;&#x3002;</p>
+<p>&#x2003;&#x2003;&#x8BE5;&#x8FC7;&#x7A0B;&#x9996;&#x5148;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x8F93;&#x5165;&#x8F6C;&#x6362;&#x4E3A;&#x6D6E;&#x70B9;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x7B2C;4&#x7AE0;&#x4E2D;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x5C06;&#x56FE;&#x50CF;&#x50CF;&#x7D20;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x5982;&#x56FE;3.1&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#x6240;&#x793A;(&#x4EE5;&#x53CA;&#x8BB8;&#x591A;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;)&#x3002;&#x4F46;&#x5728;&#x8FD9;&#x4E4B;&#x524D;&#xFF0C;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x5728; PyTorch &#x4E2D;&#x4F7F;&#x7528; <strong>tensors (&#x5F20;&#x91CF;)</strong> &#x6765;&#x5904;&#x7406;&#x6240;&#x6709;&#x7684;&#x6D6E;&#x70B9;&#x6570;&#x3002;</p>
+<h2 id="31-&#x6D6E;&#x70B9;&#x6570;&#x4E16;&#x754C;"><a name="31-&#x6D6E;&#x70B9;&#x6570;&#x4E16;&#x754C;" class="anchor-navigation-ex-anchor" href="#31-&#x6D6E;&#x70B9;&#x6570;&#x4E16;&#x754C;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 <span id="chap3-1">&#x6D6E;&#x70B9;&#x6570;&#x4E16;&#x754C;</span></h2>
+<p>&#x7531;&#x4E8E;&#x6D6E;&#x70B9;&#x6570;&#x662F;&#x7F51;&#x7EDC;&#x5904;&#x7406;&#x4FE1;&#x606F;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x5C06;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5904;&#x7406;&#x7684;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x7684;&#x6570;&#x636E;&#x7F16;&#x7801;&#x6210;&#x7F51;&#x7EDC;&#x53EF;&#x4EE5;&#x6D88;&#x5316;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8F93;&#x51FA;&#x7684;&#x6570;&#x636E;&#x89E3;&#x7801;&#x6210;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x548C;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<center>&#x56FE;3.1 &#x6DF1;&#x5EA6;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x5C06;&#x8F93;&#x5165;&#x8868;&#x793A;&#x8F6C;&#x5316;&#x4E3A;&#x8F93;&#x51FA;&#x8868;&#x793A;&#x3002;(&#x6CE8;&#xFF1A;&#x795E;&#x7ECF;&#x5143;&#x548C;&#x8F93;&#x51FA;&#x7684;&#x6570;&#x91CF;&#x4E0D;&#x6210;&#x6BD4;&#x4F8B;&#x3002;)</center>
+
+<div align="center">
+<img src="../img/Chap3/3-1.png">
+</div>
+
+<p>&#x6DF1;&#x5EA6;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x901A;&#x5E38;&#x4F1A;&#x5206;&#x9636;&#x6BB5;&#x5B66;&#x4E60;&#x4ECE;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x5230;&#x53E6;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x7684;&#x8F6C;&#x6362;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#x4E4B;&#x95F4;&#x7684;&#x90E8;&#x5206;&#x8F6C;&#x6362;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x7CFB;&#x5217;&#x4E2D;&#x95F4;&#x8868;&#x793A;&#x3002;&#x5BF9;&#x4E8E;&#x56FE;&#x50CF;&#x8BC6;&#x522B;&#x6765;&#x8BF4;&#xFF0C;&#x65E9;&#x671F;&#x7684;&#x8868;&#x793A;&#x53EF;&#x4EE5;&#x662F;&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;&#x6216;&#x67D0;&#x4E9B;&#x7EB9;&#x7406;&#xFF08;&#x5982;&#x6BDB;&#x76AE;&#xFF09;&#x7B49;&#x3002;&#x66F4;&#x6DF1;&#x5C42;&#x6B21;&#x7684;&#x8868;&#x793A;&#x53EF;&#x4EE5;&#x6355;&#x83B7;&#x66F4;&#x590D;&#x6742;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x5982;&#x8033;&#x6735;&#x3001;&#x9F3B;&#x5B50;&#x6216;&#x773C;&#x775B;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x79CD;&#x4E2D;&#x95F4;&#x8868;&#x793A;&#x662F;&#x6D6E;&#x70B9;&#x6570;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5B83;&#x5BF9;&#x8F93;&#x5165;&#x8FDB;&#x884C;&#x8868;&#x5F81;&#xFF0C;&#x5E76;&#x4EE5;&#x4E00;&#x79CD;&#x6709;&#x52A9;&#x4E8E;&#x63CF;&#x8FF0;&#x8F93;&#x5165;&#x5982;&#x4F55;&#x6620;&#x5C04;&#x5230;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x8F93;&#x51FA;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x6355;&#x83B7;&#x6570;&#x636E;&#x7684;&#x7ED3;&#x6784;&#x3002;&#x8FD9;&#x79CD;&#x8868;&#x5F81;&#x662F;&#x9488;&#x5BF9;&#x5F53;&#x524D;&#x4EFB;&#x52A1;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x76F8;&#x5173;&#x793A;&#x4F8B;&#x4E2D;&#x5B66;&#x4E60;&#x7684;&#x3002;&#x8FD9;&#x4E9B;&#x6D6E;&#x70B9;&#x6570;&#x7684;&#x96C6;&#x5408;&#x53CA;&#x5176;&#x64CD;&#x4F5C;&#x662F;&#x73B0;&#x4EE3;&#x4EBA;&#x5DE5;&#x667A;&#x80FD;&#x7684;&#x6838;&#x5FC3;--&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x672C;&#x4E66;&#x4E2D;&#x770B;&#x5230;&#x51E0;&#x4E2A;&#x8FD9;&#x6837;&#x7684;&#x793A;&#x4F8B;&#x3002;</p>
+<p>&#x8BF7;&#x52A1;&#x5FC5;&#x7262;&#x8BB0;&#xFF0C;&#x8FD9;&#x4E9B;&#x4E2D;&#x95F4;&#x8868;&#x793A;&#xFF08;&#x5982;&#x56FE;3.1&#x7B2C;&#x4E8C;&#x6B65;&#x6240;&#x793A;&#xFF09;&#x662F;&#x5C06;&#x8F93;&#x5165;&#x4E0E;&#x524D;&#x4E00;&#x5C42;&#x795E;&#x7ECF;&#x5143;&#x7684;&#x6743;&#x91CD;&#x76F8;&#x7ED3;&#x5408;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x6BCF;&#x4E2A;&#x4E2D;&#x95F4;&#x8868;&#x793A;&#x5BF9;&#x4E8E;&#x4E4B;&#x524D;&#x7684;&#x8F93;&#x5165;&#x90FD;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x5F00;&#x59CB;&#x5C06;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x6D6E;&#x70B9;&#x8F93;&#x5165;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x5FC5;&#x987B;&#x5BF9;PyTorch&#x5982;&#x4F55;&#x5904;&#x7406;&#x548C;&#x5B58;&#x50A8;&#x6570;&#x636E;--&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x3001;&#x4E2D;&#x95F4;&#x8868;&#x793A;&#x548C;&#x8F93;&#x51FA;--&#x6709;&#x4E00;&#x4E9B;&#x624E;&#x5B9E;&#x7684;&#x4E86;&#x89E3;&#x3002;&#x672C;&#x7AE0;&#x5C06;&#x4E13;&#x95E8;&#x8BA8;&#x8BBA;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x4E3A;&#x6B64;&#xFF0C;PyTorch&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1A;<strong>tensor (&#x5F20;&#x91CF;)</strong>&#x3002;&#x6211;&#x4EEC;&#x5728;&#x7B2C;2&#x7AE0;&#x5BF9;&#x9884;&#x8BAD;&#x7EC3;&#x7F51;&#x7EDC;&#x8FDB;&#x884C;&#x63A8;&#x7406;&#x65F6;&#xFF0C;&#x5DF2;&#x7ECF;&#x78B0;&#x5230;&#x4E86;&#x5F20;&#x91CF;&#x3002;&#x5BF9;&#x4E8E;&#x90A3;&#x4E9B;&#x6765;&#x81EA;&#x6570;&#x5B66;&#x3001;&#x7269;&#x7406;&#x5B66;&#x6216;&#x5DE5;&#x7A0B;&#x5B66;&#x7684;&#x4EBA;&#x6765;&#x8BF4;&#xFF0C;&#x5F20;&#x91CF;&#x8FD9;&#x4E2A;&#x672F;&#x8BED;&#x4E0E;&#x7A7A;&#x95F4;&#x3001;&#x53C2;&#x7167;&#x7CFB;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x7684;&#x53D8;&#x6362;&#x7684;&#x6982;&#x5FF5;&#x6346;&#x7ED1;&#x5728;&#x4E00;&#x8D77;&#x3002;&#x65E0;&#x8BBA;&#x597D;&#x574F;&#xFF0C;&#x8FD9;&#x4E9B;&#x6982;&#x5FF5;&#x5728;&#x8FD9;&#x91CC;&#x5747;&#x4E0D;&#x9002;&#x7528;&#x3002;&#x5728;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#xFF0C;<strong>&#x5F20;&#x91CF;&#x662F;&#x6307;&#x5411;&#x91CF;&#x548C;&#x77E9;&#x9635;&#x5230;&#x4EFB;&#x610F;&#x7EF4;&#x6570;&#x7684;&#x6CDB;&#x5316;</strong>&#xFF0C;&#x5982;&#x56FE;3.2&#x6240;&#x793A;&#x3002;&#x8FD9;&#x4E00;&#x6982;&#x5FF5;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x540D;&#x79F0;&#x662F;<strong>multidimensional array (&#x591A;&#x7EF4;&#x6570;&#x7EC4;)</strong>&#x3002;&#x5F20;&#x91CF;&#x7684;&#x7EF4;&#x6570;&#x4E0E;&#x7528;&#x4E8E;&#x5F15;&#x7528;&#x5F20;&#x91CF;&#x5185;&#x6807;&#x91CF;&#x503C;&#x7684;&#x7D22;&#x5F15;&#x6570;&#x4E00;&#x81F4;&#x3002;</p>
+<center>&#x56FE;3.2 &#x5F20;&#x91CF;&#x662F;&#x5728;PyTorch&#x4E2D;&#x8868;&#x793A;&#x6570;&#x636E;&#x7684;&#x57FA;&#x7840;</center>
+
+<div align="center">
+<img src="../img/Chap3/3-2.png">
+</div>
+
+
+<p>PyTorch&#x4E0D;&#x662F;&#x552F;&#x4E00;&#x5904;&#x7406;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x5E93;&#x3002;NumPy&#x662F;&#x8FC4;&#x4ECA;&#x4E3A;&#x6B62;&#x6700;&#x53D7;&#x6B22;&#x8FCE;&#x7684;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x8BF4;&#x5B83;&#x73B0;&#x5728;&#x5DF2;&#x7ECF;&#x6210;&#x4E3A;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x7684;&#x901A;&#x7528;&#x8BED;&#x8A00;&#x3002;PyTorch&#x7684;&#x7279;&#x70B9;&#x662F;&#x4E0E;NumPy&#x7684;&#x65E0;&#x7F1D;&#x4E92;&#x64CD;&#x4F5C;&#x6027;&#xFF0C;&#x8FD9;&#x4E3A;&#x5B83;&#x5E26;&#x6765;&#x4E86;&#x4E0E;Python&#x4E2D;&#x5176;&#x4ED6;&#x79D1;&#x5B66;&#x5E93;&#x7684;&#x4E00;&#x6D41;&#x96C6;&#x6210;&#xFF0C;&#x6BD4;&#x5982;SciPy (<a href="https://www.scipy.org" target="_blank">https://www.scipy.org</a>) &#x3001;Scikit-Learning (<a href="https://scikit-learn.org" target="_blank">https://scikit-learn.org</a>) &#x548C;Pandas (<a href="https://pandas.pydata.org" target="_blank">https://pandas.pydata.org</a>) &#x3002;</p>
+<p>&#x4E0E;NumPy&#x6570;&#x7EC4;&#x76F8;&#x6BD4;&#xFF0C;PyTorch&#x5F20;&#x91CF;&#x5177;&#x6709;&#x4E00;&#x4E9B;&#x8D85;&#x5F3A;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4F8B;&#x5982;&#x80FD;&#x591F;&#x5728;&#x56FE;&#x5F62;&#x5904;&#x7406;&#x5355;&#x5143;(GPU)&#x4E0A;&#x6267;&#x884C;&#x975E;&#x5E38;&#x5FEB;&#x901F;&#x7684;&#x64CD;&#x4F5C;&#x3001;&#x5728;&#x591A;&#x4E2A;&#x8BBE;&#x5907;&#x6216;&#x673A;&#x5668;&#x4E0A;&#x5206;&#x5E03;&#x5F0F;&#x64CD;&#x4F5C;&#xFF0C;&#x4EE5;&#x53CA;&#x8DDF;&#x8E2A;&#x521B;&#x5EFA;&#x5B83;&#x4EEC;&#x7684;&#x8BA1;&#x7B97;&#x56FE;&#x7684;&#x80FD;&#x529B;&#x3002;&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x5B9E;&#x73B0;&#x73B0;&#x4EE3;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x5E93;&#x7684;&#x91CD;&#x8981;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4ECB;&#x7ECD;PyTorch&#x5F20;&#x91CF;&#xFF0C;&#x5176;&#x4E2D;&#x6DB5;&#x76D6;&#x4E86;&#x5B83;&#x7684;&#x76F8;&#x5173;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E3A;&#x672C;&#x4E66;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x7684;&#x5DE5;&#x4F5C;&#x505A;&#x51C6;&#x5907;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4F7F;&#x7528;PyTorch&#x5F20;&#x91CF;&#x5E93;&#x64CD;&#x7EB5;&#x5F20;&#x91CF;&#x3002;&#x8FD9;&#x5305;&#x62EC;&#x8BF8;&#x5982;&#x5982;&#x4F55;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5982;&#x4F55;&#x5728;&#x56FA;&#x5B9A;&#x65F6;&#x95F4;&#x5185;&#x5BF9;&#x4EFB;&#x610F;&#x5927;&#x7684;&#x5F20;&#x91CF;&#x6267;&#x884C;&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#x4EE5;&#x53CA;&#x524D;&#x9762;&#x63D0;&#x5230;&#x7684;NumPy&#x4E92;&#x64CD;&#x4F5C;&#x6027;&#x548C;GPU&#x52A0;&#x901F;&#x3002;&#x5982;&#x679C;&#x8981;&#x4F7F;&#x5F20;&#x91CF;&#x6210;&#x4E3A;&#x6211;&#x4EEC;&#x7F16;&#x7A0B;&#x5DE5;&#x5177;&#x7BB1;&#x4E2D;&#x7684;&#x9996;&#x9009;&#x5DE5;&#x5177;&#xFF0C;&#x4E86;&#x89E3;&#x5F20;&#x91CF;&#x7684;&#x529F;&#x80FD;&#x548C;API&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x3002;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5145;&#x5206;&#x5229;&#x7528;&#x8FD9;&#x4E9B;&#x77E5;&#x8BC6;&#xFF0C;&#x5E76;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4EE5;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x8FDB;&#x884C;&#x5B66;&#x4E60;&#x7684;&#x65B9;&#x5F0F;&#x8868;&#x793A;&#x51E0;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="32-&#x5F20;&#x91CF;&#xFF1A;&#x591A;&#x7EF4;&#x6570;&#x7EC4;"><a name="32-&#x5F20;&#x91CF;&#xFF1A;&#x591A;&#x7EF4;&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#32-&#x5F20;&#x91CF;&#xFF1A;&#x591A;&#x7EF4;&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 <span id="chap3-2">&#x5F20;&#x91CF;&#xFF1A;&#x591A;&#x7EF4;&#x6570;&#x7EC4;</span></h2>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x4E86;&#x89E3;&#x5230;&#xFF0C;&#x5F20;&#x91CF;&#x662F;PyTorch&#x4E2D;&#x7684;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002; &#x5F20;&#x91CF;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF1A;&#x5373;&#x4E00;&#x79CD;&#x5B58;&#x50A8;&#x6570;&#x5B57;&#x96C6;&#x5408;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x4E9B;&#x6570;&#x5B57;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x5355;&#x72EC;&#x8BBF;&#x95EE;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x7D22;&#x5F15;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x3002;</p>
+<h3 id="321-&#x4ECE;python&#x5217;&#x8868;&#x5230;pytorch&#x5F20;&#x91CF;"><a name="321-&#x4ECE;python&#x5217;&#x8868;&#x5230;pytorch&#x5F20;&#x91CF;" class="anchor-navigation-ex-anchor" href="#321-&#x4ECE;python&#x5217;&#x8868;&#x5230;pytorch&#x5F20;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.1 &#x4ECE;Python&#x5217;&#x8868;&#x5230;PyTorch&#x5F20;&#x91CF;</h3>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x5217;&#x8868;&#x7D22;&#x5F15;&#x7684;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x4E0E;&#x5F20;&#x91CF;&#x7D22;&#x5F15;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;&#x5728;Python&#x4E2D;&#x53D6;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E09;&#x4E2A;&#x6570;&#x5B57;&#x7684;&#x5217;&#x8868;(.code/p1ch3/1_tensors.ipynb)&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[1]:</span>
+a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5BF9;&#x5E94;&#x7684;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x7684;&#x7D22;&#x5F15;&#x6765;&#x8BBF;&#x95EE;&#x5217;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[2]:</span>
+a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Out[2]:</span>
+<span class="token number">1.0</span>
+
+<span class="token comment"># In[3]:</span>
+a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3.0</span>
+a
+
+<span class="token comment"># Out[3]:</span>
+<span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span>
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x5904;&#x7406;&#x6570;&#x5B57;&#x5411;&#x91CF;&#x7684;&#x7B80;&#x5355; Python &#x7A0B;&#x5E8F;&#x6765;&#x8BF4;&#xFF0C;&#x4F7F;&#x7528; Python &#x5217;&#x8868;&#x6765;&#x5B58;&#x50A8;&#x5411;&#x91CF;&#x662F;&#x5F88;&#x5E38;&#x89C1;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x4E8C;&#x7EF4;&#x7EBF;&#x7684;&#x5750;&#x6807;&#x3002;&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x4E2D;&#x6240;&#x770B;&#x5230;&#x7684;&#xFF0C;&#x4F7F;&#x7528;&#x66F4;&#x6709;&#x6548;&#x7684;&#x5F20;&#x91CF;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x8BB8;&#x591A;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;--&#x4ECE;&#x56FE;&#x50CF;&#x5230;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x53E5;&#x5B50;&#x3002;&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x5F20;&#x91CF;&#x4E0A;&#x7684;&#x64CD;&#x4F5C;(&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#x63A2;&#x8BA8;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;)&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x4F7F;&#x7528;&#x9AD8;&#x7EA7;&#xFF08;&#x4F46;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x5FEB;&#x901F;&#xFF09;&#x7684;&#x8BED;&#x8A00;&#xFF08;&#x4F8B;&#x5982;Python&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x9AD8;&#x6548;&#x5730;&#x5207;&#x7247;&#x548C;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="322-&#x6784;&#x5EFA;&#x6211;&#x4EEC;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;"><a name="322-&#x6784;&#x5EFA;&#x6211;&#x4EEC;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;" class="anchor-navigation-ex-anchor" href="#322-&#x6784;&#x5EFA;&#x6211;&#x4EEC;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.2 &#x6784;&#x5EFA;&#x6211;&#x4EEC;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;</h3>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x6784;&#x9020;&#x7B2C;&#x4E00;&#x4E2A;PyTorch&#x5F20;&#x91CF;&#xFF0C;&#x5E76;&#x770B;&#x770B;&#x5B83;&#x7684;&#x6784;&#x9020;&#x3002;&#x5B83;&#x4E0D;&#x5FC5;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x522B;&#x6709;&#x610F;&#x4E49;&#x7684;&#x5F20;&#x91CF;&#xFF0C;&#x53EA;&#x9700;&#x8BBE;&#x7F6E;&#x4E3A;&#x5305;&#x62EC;&#x4E09;&#x4E2A;1&#x7684;&#x5217;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[4]:</span>
+<span class="token keyword">import</span> torch
+a <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+a
+
+<span class="token comment"># Out[4]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[5]:</span>
+a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Out[5]:</span>
+tensor<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[6]:</span>
+<span class="token builtin">float</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[6]:</span>
+<span class="token number">1.0</span>
+
+<span class="token comment"># In[7]:</span>
+a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2.0</span>
+a
+
+<span class="token comment"># Out[7]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<pre class="language-"><code class="lang-python">&#x5176;&#x4E2D;&#xFF0C;
+<span class="token comment"># In[4]:</span>
+<span class="token keyword">import</span> torch       <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x5BFC;&#x5165;<span class="token keyword">import</span>&#x6A21;&#x5757;
+a <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>  <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x521B;&#x5EFA;&#x5C3A;&#x5BF8;&#x4E3A;<span class="token number">3</span>&#x4E14;&#x586B;&#x5145;&#x503C;&#x4E3A;<span class="token number">1</span>&#x7684;&#x4E00;&#x7EF4;&#x5F20;&#x91CF;
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>&#x5BFC;&#x5165;<code>torch</code>&#x6A21;&#x5757;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x4E3A;3&#x7684;&#xFF08;&#x4E00;&#x7EF4;&#xFF09;&#x5F20;&#x91CF;&#xFF0C;&#x586B;&#x5145;&#x503C;&#x4E3A;1.0&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x7684;&#x7D22;&#x5F15;&#x6765;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x6216;&#x8005;&#x4E3A;&#x5176;&#x8D4B;&#x4E00;&#x4E2A;&#x65B0;&#x503C;&#x3002;&#x867D;&#x7136;&#x4ECE;&#x8868;&#x9762;&#x4E0A;&#x770B;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E0E;&#x6570;&#x5B57;&#x5BF9;&#x8C61;&#x7684;&#x5217;&#x8868;&#x6CA1;&#x6709;&#x592A;&#x5927;&#x533A;&#x522B;&#xFF0C;&#x4F46;&#x5728;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#x3002;</p>
+<h2 id="323-&#x5F20;&#x91CF;&#x7684;&#x672C;&#x8D28;"><a name="323-&#x5F20;&#x91CF;&#x7684;&#x672C;&#x8D28;" class="anchor-navigation-ex-anchor" href="#323-&#x5F20;&#x91CF;&#x7684;&#x672C;&#x8D28;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.3 &#x5F20;&#x91CF;&#x7684;&#x672C;&#x8D28;</h2>
+<p>Python&#x5217;&#x8868;&#x6216;&#x6570;&#x5B57;&#x5143;&#x7EC4;&#x662F;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5355;&#x72EC;&#x5206;&#x914D;&#x7684;Python&#x5BF9;&#x8C61;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5982;&#x56FE; 3.3 &#x5DE6;&#x4FA7;&#x6240;&#x793A;&#x3002;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;PyTorch tensors&#x6216;NumPy&#x6570;&#x7EC4;&#x4ECE;&#x89C6;&#x56FE;&#x4E0A;&#x770B;&#xFF0C;(&#x901A;&#x5E38;)&#x662F;&#x5206;&#x5E03;&#x5728;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#x5757;&#x4E0A;&#xFF0C;&#x5305;&#x542B;&#x6709;<em>unboxed C</em>&#x6570;&#x5B57;&#x7C7B;&#x578B;(&#x8BD1;&#x8005;&#x6CE8;&#xFF1A;&#x5373;&#x4E0D;&#x6D89;&#x53CA;&#x6307;&#x9488;&#x6216;&#x5806;&#x5206;&#x914D;&#x7684;&#x7C7B;&#x578B;)&#xFF0C;&#x800C;&#x4E0D;&#x662F;Python&#x5BF9;&#x8C61;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x56FE;3.3&#x53F3;&#x4FA7;&#x6240;&#x793A;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x4E00;&#x4E2A;32&#x4F4D;(4 &#x5B57;&#x8282;)&#x7684;&#x6D6E;&#x70B9;&#x6570;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5B58;&#x50A8;1,000,000&#x4E2A;&#x6D6E;&#x70B9;&#x6570;&#x7684;1D(&#x4E00;&#x7EF4;)&#x5F20;&#x91CF;&#x6070;&#x597D;&#x9700;&#x8981;4,000,000&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x5B57;&#x8282;&#xFF0C;&#x5916;&#x52A0;&#x5143;&#x6570;&#x636E;(&#x5982;&#x5C3A;&#x5BF8;&#x548C;&#x6570;&#x503C;&#x7C7B;&#x578B;)&#x7684;&#x5C11;&#x91CF;&#x5F00;&#x9500;&#x3002;</p>
+<center>&#x56FE;3.3 Python&#x5BF9;&#x8C61;(&#x88C5;&#x7BB1;)&#x6570;&#x503C;&#x4E0E;&#x5F20;&#x91CF;(&#x672A;&#x88C5;&#x7BB1;&#x6570;&#x7EC4;)&#x6570;&#x503C;&#x7684;&#x5BF9;&#x6BD4;</center>
+
+<div align="center">
+<img src="../img/Chap3/3-3.png">
+</div>
+
+<p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x8981;&#x7528;&#x6765;&#x8868;&#x793A;&#x51E0;&#x4F55;&#x5BF9;&#x8C61;&#x7684;&#x5750;&#x6807;&#x5217;&#x8868;&#xFF1A;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x4F4D;&#x4E8E;&#x5750;&#x6807;(4&#xFF0C;1)&#x3001;(5&#xFF0C;3)&#x548C;(2&#xFF0C;1)&#x7684;2D&#x4E09;&#x89D2;&#x5F62;&#x3002;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E0E;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x76F8;&#x5173;&#xFF0C;&#x4F46;&#x662F;&#x5F88;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x7EF4;&#x5F20;&#x91CF;&#xFF0C;&#x5C06;X&#x5B58;&#x50A8;&#x5728;&#x5076;&#x6570;&#x7D22;&#x5F15;&#x4E2D;&#xFF0C;&#x5C06;Y&#x5B58;&#x50A8;&#x5728;&#x5947;&#x6570;&#x7D22;&#x5F15;&#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x50CF;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x6240;&#x505A;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x5728;Python&#x5217;&#x8868;&#x4E2D;&#x5C06;&#x5750;&#x6807;&#x4F5C;&#x4E3A;&#x6570;&#x5B57;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[8]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>
+points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4.0</span>
+points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1.0</span>
+points<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">5.0</span>
+points<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3.0</span>
+points<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2.0</span>
+points<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1.0</span>
+</code></pre>
+<pre class="language-"><code class="lang-python">&#x5176;&#x4E2D;&#xFF0C;
+<span class="token comment"># In[8]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>  <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x4F7F;&#x7528;<span class="token punctuation">.</span>zeros&#x53EA;&#x662F;&#x4E00;&#x79CD;&#x83B7;&#x5F97;&#x5408;&#x9002;&#x5C3A;&#x5BF8;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;&#x3002;
+points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4.0</span>          <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x6211;&#x4EEC;&#x7528;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x7684;&#x503C;&#x91CD;&#x5199;&#x8FD9;&#x4E9B;<span class="token number">0</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5C06;Python&#x5217;&#x8868;&#x4F20;&#x9012;&#x7ED9;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x6548;&#x679C;&#x76F8;&#x540C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[9]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">5.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+points
+
+<span class="token comment"># Out[9]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x5F97;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x70B9;&#x7684;&#x5750;&#x6807;&#xFF0C;&#x6211;&#x4EEC;&#x505A;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[10]:</span>
+<span class="token builtin">float</span><span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">(</span>points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[10]:</span>
+<span class="token punctuation">(</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x5C3D;&#x7BA1;&#x8BA9;&#x7B2C;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x5F15;&#x7528;&#x5355;&#x4E2A;&#x4E8C;&#x7EF4;&#x70B9;&#x800C;&#x4E0D;&#x662F;&#x70B9;&#x5750;&#x6807;&#x662F;&#x53EF;&#x884C;&#x7684;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;2D&#x5F20;&#x91CF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[11]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+points
+
+<span class="token comment"># Out[11]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5411;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4F20;&#x9012;&#x4E00;&#x4E32;&#x5217;&#x8868;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x5F20;&#x91CF;&#x7684;&#x5F62;&#x72B6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[12]:</span>
+points<span class="token punctuation">.</span>shape
+
+<span class="token comment"># Out[12]:</span>
+torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x8BA9;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x4E86;&#x5F20;&#x91CF;&#x5728;&#x6BCF;&#x4E2A;&#x7EF4;&#x5EA6;&#x4E0A;&#x7684;&#x5C3A;&#x5BF8;&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>zeros</code>&#x6216;<code>ones</code>&#x6765;&#x521D;&#x59CB;&#x5316;&#x5F20;&#x91CF;&#xFF0C;&#x4EE5;&#x5143;&#x7EC4;&#x5F62;&#x5F0F;&#x63D0;&#x4F9B;&#x5C3A;&#x5BF8;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[13]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+points
+
+<span class="token comment"># Out[13]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x7D22;&#x5F15;&#x8BBF;&#x95EE;&#x5F20;&#x91CF;&#x4E2D;&#x7684;&#x5355;&#x4E2A;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[14]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+points
+
+<span class="token comment"># Out[14]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[15]:</span>
+points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Out[15]:</span>
+tensor<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x5C06;&#x8FD4;&#x56DE;&#x6211;&#x4EEC;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7B2C;0&#x4E2A;&#x70B9;&#x7684;Y&#x5750;&#x6807;&#x3002;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x50CF;&#x4EE5;&#x524D;&#x4E00;&#x6837;&#x8BBF;&#x95EE;&#x5F20;&#x91CF;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4EE5;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x70B9;&#x7684;2D&#x5750;&#x6807;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[16]:</span>
+points<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Out[16]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#xFF0C;&#x5B83;&#x5C55;&#x793A;&#x4E86;&#x540C;&#x4E00;&#x57FA;&#x7840;&#x6570;&#x636E;&#x7684;&#x4E0D;&#x540C;&#x89C6;&#x56FE;&#x3002;&#x65B0;&#x7684;&#x5F20;&#x91CF;&#x662F;&#x4E00;&#x4E2A;&#x5C3A;&#x5BF8;&#x4E3A;2&#x7684;1D&#x5F20;&#x91CF;&#xFF0C;&#x5F15;&#x7528;&#x4E86;<code>points</code>&#x5F20;&#x91CF;&#x4E2D;&#x7B2C;&#x4E00;&#x884C;&#x7684;&#x503C;&#x3002;&#x8FD9;&#x662F;&#x5426;&#x610F;&#x5473;&#x7740;&#x5206;&#x914D;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5185;&#x5B58;&#x5757;&#xFF0C;&#x5C06;&#x503C;&#x590D;&#x5236;&#x5230;&#x5176;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x65B0;&#x7684;&#x5185;&#x5B58;&#x88AB;&#x5305;&#x88F9;&#x5728;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5F20;&#x91CF;&#x5BF9;&#x8C61;&#x4E2D;&#x8FD4;&#x56DE;&#xFF1F;&#x4E0D;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x6837;&#x7684;&#x6548;&#x7387;&#x5F88;&#x4F4E;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5F53;&#x6211;&#x4EEC;&#x6709;&#x6570;&#x767E;&#x4E07;&#x4E2A;&#x70B9;&#x7684;&#x65F6;&#x5019;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x672C;&#x7AE0;&#x7A0D;&#x540E;&#x7684;3.7&#x8282;&#x4ECB;&#x7ECD;&#x5F20;&#x91CF;&#x7684;&#x89C6;&#x56FE;&#x65F6;&#xFF0C;&#x91CD;&#x65B0;&#x8BA8;&#x8BBA;&#x5F20;&#x91CF;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x3002;</p>
+<h2 id="33-&#x7D22;&#x5F15;&#x5F20;&#x91CF;"><a name="33-&#x7D22;&#x5F15;&#x5F20;&#x91CF;" class="anchor-navigation-ex-anchor" href="#33-&#x7D22;&#x5F15;&#x5F20;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 <span id="chap3-3">&#x7D22;&#x5F15;&#x5F20;&#x91CF;</span></h2>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x70B9;&#x4EE5;&#x5916;&#x7684;&#x6240;&#x6709;&#x70B9;&#x7684;&#x5F20;&#x91CF;&#x600E;&#x4E48;&#x529E;&#x5462;&#xFF1F;&#x4F7F;&#x7528;&#x8303;&#x56F4;&#x7D22;&#x5F15;&#x8868;&#x793A;&#x6CD5;&#x5F88;&#x5BB9;&#x6613;&#x505A;&#x5230;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x8BE5;&#x8868;&#x793A;&#x6CD5;&#x4E5F;&#x9002;&#x7528;&#x4E8E;&#x6807;&#x51C6;Python&#x5217;&#x8868;&#x3002;&#x63D0;&#x9192;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[53]:</span>
+some_list <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+some_list<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+some_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span>
+some_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+some_list<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span>
+some_list<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+some_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>
+</code></pre>
+<pre class="language-"><code class="lang-python">&#x5176;&#x4E2D;&#xFF0C;
+<span class="token comment"># In[53]:</span>
+some_list <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+some_list<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>               <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x6240;&#x6709;&#x5143;&#x7D20;&#x90FD;&#x5728;&#x5217;&#x8868;&#x4E2D;
+some_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span>             <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x4ECE;&#x5143;&#x7D20;<span class="token number">1</span><span class="token punctuation">(</span>&#x542B;<span class="token punctuation">)</span>&#x5230;&#x5143;&#x7D20;<span class="token number">4</span><span class="token punctuation">(</span>&#x4E0D;&#x542B;<span class="token punctuation">)</span>
+some_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>              <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x4ECE;&#x5143;&#x7D20;<span class="token number">1</span><span class="token punctuation">(</span>&#x542B;<span class="token punctuation">)</span>&#x5230;&#x5217;&#x8868;&#x7684;&#x672B;&#x5C3E;
+some_list<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span>              <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x4ECE;&#x5217;&#x8868;&#x7684;&#x5F00;&#x59CB;&#x5230;&#x5143;&#x7D20;<span class="token number">4</span><span class="token punctuation">(</span>&#x4E0D;&#x542B;<span class="token punctuation">)</span>
+some_list<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>             <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x4ECE;&#x5217;&#x8868;&#x7684;&#x5F00;&#x59CB;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x524D;&#x4E00;&#x4E2A;
+some_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>           <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x4ECE;&#x5143;&#x7D20;<span class="token number">1</span><span class="token punctuation">(</span>&#x542B;<span class="token punctuation">)</span>&#x5230;&#x5143;&#x7D20;<span class="token number">4</span><span class="token punctuation">(</span>&#x4E0D;&#x542B;<span class="token punctuation">)</span>&#xFF0C;&#x4EE5;<span class="token number">2</span>&#x4E3A;&#x6B65;&#x957F;
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x6211;&#x4EEC;&#x7684;&#x76EE;&#x6807;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;PyTorch&#x5F20;&#x91CF;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x8868;&#x793A;&#x6CD5;&#xFF0C;&#x8FD8;&#x6709;&#x989D;&#x5916;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x5C31;&#x50CF;&#x5728; NumPy&#x548C;&#x5176;&#x4ED6;Python&#x79D1;&#x5B66;&#x5E93;&#x4E2D;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;&#x5F20;&#x91CF;&#x7684;&#x6BCF;&#x4E2A;&#x7EF4;&#x5EA6;&#x4F7F;&#x7528;&#x8303;&#x56F4;&#x7D22;&#x5F15;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[54]:</span>
+points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span>
+points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+points<span class="token punctuation">[</span><span class="token boolean">None</span><span class="token punctuation">]</span>
+</code></pre>
+<pre class="language-"><code class="lang-python">&#x5176;&#x4E2D;&#xFF0C;
+<span class="token comment"># In[54]:</span>
+points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>          <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x7B2C;&#x4E00;&#x884C;&#x4E4B;&#x540E;&#x7684;&#x6240;&#x6709;&#x884C;&#xFF1B;&#x9690;&#x5F0F;&#x9009;&#x62E9;&#x6240;&#x6709;&#x5217;
+points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span>       <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x7B2C;&#x4E00;&#x884C;&#x4E4B;&#x540E;&#x7684;&#x6240;&#x6709;&#x884C;&#xFF1B;&#x6240;&#x6709;&#x5217;
+points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>       <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x7B2C;&#x4E00;&#x884C;&#x4E4B;&#x540E;&#x7684;&#x6240;&#x6709;&#x884C;&#xFF1B;&#x7B2C;&#x4E00;&#x5217;
+points<span class="token punctuation">[</span><span class="token boolean">None</span><span class="token punctuation">]</span>        <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x5C3A;&#x5BF8;&#x4E3A;<span class="token number">1</span>&#x7684;&#x7EF4;&#x5EA6;&#xFF0C;&#x5C31;&#x50CF;unsqueeze&#x4E00;&#x6837;
+</code></pre>
+<p>&#x9664;&#x4E86;&#x4F7F;&#x7528;&#x8303;&#x56F4;&#x4E4B;&#x5916;&#xFF0C;PyTorch &#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5F3A;&#x5927;&#x7684;&#x7D22;&#x5F15;&#x5F62;&#x5F0F;&#xFF0C;&#x79F0;&#x4E3A;<strong>&#x9AD8;&#x7EA7;&#x7D22;&#x5F15;(advanced indexing)</strong>&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x4E2D;&#x8FDB;&#x4E00;&#x6B65;&#x63A2;&#x7D22;&#x3002;</p>
+<h2 id="34-&#x547D;&#x540D;&#x5F20;&#x91CF;"><a name="34-&#x547D;&#x540D;&#x5F20;&#x91CF;" class="anchor-navigation-ex-anchor" href="#34-&#x547D;&#x540D;&#x5F20;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4 <span id="chap3-4">&#x547D;&#x540D;&#x5F20;&#x91CF;</span></h2>
+<p>&#x5F20;&#x91CF;&#x7684;&#x7EF4;&#x5EA6;&#xFF08;&#x6216;&#x8F74;&#xFF09;&#x901A;&#x5E38;&#x4F1A;&#x5BF9;&#x50CF;&#x7D20;&#x4F4D;&#x7F6E;&#x6216;&#x989C;&#x8272;&#x901A;&#x9053;&#x7B49;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5F53;&#x6211;&#x4EEC;&#x8981;&#x5BF9;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8BB0;&#x4F4F;&#x7EF4;&#x5EA6;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x5E76;&#x636E;&#x6B64;&#x76F8;&#x5E94;&#x5730;&#x7F16;&#x5199;&#x6211;&#x4EEC;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x7531;&#x4E8E;&#x6570;&#x636E;&#x662F;&#x901A;&#x8FC7;&#x591A;&#x4E2A;&#x5F20;&#x91CF;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x8DDF;&#x8E2A;&#x54EA;&#x4E2A;&#x7EF4;&#x5EA6;&#x5305;&#x542B;&#x4EC0;&#x4E48;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x4F1A;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;3D&#x5F20;&#x91CF;&#xFF0C;&#x5982;2.1.4&#x8282;&#x4E2D;&#x7684;<code>img_t</code>(&#x4E3A;&#x7B80;&#x5355;&#x8D77;&#x89C1;&#xFF0C;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x5C06;&#x4F7F;&#x7528;&#x865A;&#x62DF;&#x6570;&#x636E;)&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x7070;&#x5EA6;&#x3002;&#x6211;&#x4EEC;&#x67E5;&#x627E;&#x989C;&#x8272;&#x7684;&#x5178;&#x578B;&#x6743;&#x91CD;&#x4EE5;&#x5F97;&#x51FA;&#x5355;&#x4E2A;&#x4EAE;&#x5EA6;&#x503C;&#xFF1A;<a href="#jump3-1"><sup>1</sup></a></p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[2]:</span>
+img_t <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token comment"># shape [channels, rows, columns]</span>
+weights <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.2126</span><span class="token punctuation">,</span> <span class="token number">0.7152</span><span class="token punctuation">,</span> <span class="token number">0.0722</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8FD8;&#x901A;&#x5E38;&#x5E0C;&#x671B;&#x4EE3;&#x7801;&#x80FD;&#x591F;&#x6CDB;&#x5316;-&#x4F8B;&#x5982;&#xFF0C;&#x4ECE;&#x8868;&#x793A;&#x4E3A;&#x5177;&#x6709;&#x9AD8;&#x5EA6;&#x548C;&#x5BBD;&#x5EA6;&#x7EF4;&#x5EA6;&#x7684;2D&#x5F20;&#x91CF;&#x7684;&#x7070;&#x5EA6;&#x56FE;&#x50CF;&#x5230;&#x6DFB;&#x52A0;&#x7B2C;&#x4E09;&#x4E2A;&#x901A;&#x9053;&#x7EF4;&#x5EA6;&#x7684;&#x5F69;&#x8272;&#x56FE;&#x50CF;&#xFF08;&#x5982;RGB&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x4ECE;&#x5355;&#x5F20;&#x56FE;&#x50CF;&#x5230;&#x4E00;&#x6279;&#x56FE;&#x50CF;&#x3002;&#x5728;2.1.4&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5728;<code>batch_t</code>&#x4E2D;&#x5F15;&#x5165;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x6279;&#x5904;&#x7406;&#x7EF4;&#x5EA6;&#xFF1B;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x4E2A;&#x6279;&#x5904;&#x7406;&#x7EF4;&#x5EA6;&#x8BBE;&#x7F6E;&#x4E3A;2&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[3]:</span>
+batch_t <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token comment"># shape [batch, channels, rows, columns]</span>
+</code></pre>
+<p>&#x6240;&#x4EE5;&#x6709;&#x65F6;RGB&#x901A;&#x9053;&#x5728;0&#x7EF4;&#xFF0C;&#x6709;&#x65F6;&#x5728;1&#x7EF4;&#x3002;&#x4F46;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4ECE;&#x672B;&#x5C3E;&#x6570;&#x8D77;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x6982;&#x62EC;&#xFF1A;&#x5B83;&#x4EEC;&#x603B;&#x662F;&#x5728;&#x7EF4;&#x5EA6;-3&#xFF0C;&#x5373;&#x4ECE;&#x672B;&#x5C3E;&#x6570;&#x8D77;&#x7684;&#x7B2C;&#x4E09;&#x4E2A;&#x7EF4;&#x5EA6;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5077;&#x61D2;&#x7248;&#x7684;&#x3001;&#x672A;&#x52A0;&#x6743;&#x7684;&#x5E73;&#x5747;&#x6570;(mean)&#x53EF;&#x4EE5;&#x5199;&#x6210;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[4]:</span>
+img_gray_naive <span class="token operator">=</span> img_t<span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span>
+batch_gray_naive <span class="token operator">=</span> batch_t<span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span>
+img_gray_naive<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> batch_gray_naive<span class="token punctuation">.</span>shape
+
+<span class="token comment"># Out[4]:</span>
+<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4F46;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x52A0;&#x5165;&#x4E86;&#x6743;&#x91CD;&#x3002;PyTorch&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5C06;&#x5F62;&#x72B6;(shape)&#x76F8;&#x540C;&#x7684;&#x91CF;&#x76F8;&#x4E58;&#xFF0C;&#x6216;&#x8005;&#x5C06;&#x5F62;&#x72B6;&#x91CC;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;(one operand)&#x5728;&#x6307;&#x5B9A;&#x7EF4;&#x5EA6;&#x4E2D;&#x4E3A;1&#x7684;&#x91CF;&#x76F8;&#x4E58;&#x3002;&#x5B83;&#x8FD8;&#x4F1A;&#x81EA;&#x52A8;&#x8FFD;&#x52A0;&#x5C3A;&#x5BF8;&#x4E3A;1&#x7684;leading dimensions(LDA)&#x3002;&#x5F62;&#x72B6;&#x4E3A;(2, 3, 5, 5)&#x7684; <code>batch_t</code> &#x4E58;&#x4EE5;&#x5F62;&#x72B6;(3, 1, 1)&#x7684; <code>unsqueezed_weights</code>&#xFF0C;&#x5F97;&#x5230;&#x5F62;&#x72B6;(2, 3, 5, 5)&#x7684;&#x5F20;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4ECE;&#x672B;&#x7AEF;(&#x4E09;&#x4E2A;&#x901A;&#x9053;)&#x5BF9;&#x7B2C;&#x4E09;&#x4E2A;&#x7EF4;&#x5EA6;&#x8FDB;&#x884C;&#x6C42;&#x548C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[5]:</span>
+unsqueezed_weights <span class="token operator">=</span> weights<span class="token punctuation">.</span>unsqueeze<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>unsqueeze_<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+img_weights <span class="token operator">=</span> <span class="token punctuation">(</span>img_t <span class="token operator">*</span> unsqueezed_weights<span class="token punctuation">)</span>
+batch_weights <span class="token operator">=</span> <span class="token punctuation">(</span>batch_t <span class="token operator">*</span> unsqueezed_weights<span class="token punctuation">)</span>
+img_gray_weighted <span class="token operator">=</span> img_weights<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span>
+batch_gray_weighted <span class="token operator">=</span> batch_weights<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span>
+batch_weights<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> batch_t<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> unsqueezed_weights<span class="token punctuation">.</span>shape
+
+<span class="token comment"># Out[5]:</span>
+<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x8FD9;&#x6837;&#x505A;&#x53D8;&#x5F97;&#x6742;&#x4E71;&#x65E0;&#x7AE0;--&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#xFF0C;PyTorch&#x51FD;&#x6570; <code>einsum</code> (&#x6539;&#x7F16;&#x81EA; NumPy) &#x6307;&#x5B9A;&#x4E86;&#x4E00;&#x79CD;<strong>&#x7D22;&#x5F15;&#x8FF7;&#x4F60;&#x8BED;&#x8A00;(indexing mini-language)</strong><a href="#jump3-2"><sup>2</sup></a>&#xFF0C;&#x4E3A;&#x8FD9;&#x4E9B;&#x4E58;&#x79EF;&#x7684;&#x548C;&#x63D0;&#x4F9B;&#x4E86;&#x7EF4;&#x5EA6;&#x7684;&#x7D22;&#x5F15;&#x540D;&#x79F0;&#x3002;&#x5C31;&#x50CF;&#x5728;Python&#x4E2D;&#x4E00;&#x6837;&#xFF0C;&#x5E7F;&#x64AD; -- &#x4E00;&#x79CD;&#x603B;&#x7ED3;&#x672A;&#x547D;&#x540D;&#x4E8B;&#x7269;&#x7684;&#x5F62;&#x5F0F; -- &#x662F;&#x7528;&#x4E09;&#x4E2A;&#x70B9; &apos;...&apos;&#x6765;&#x5B8C;&#x6210;&#x7684;&#xFF1B;&#x4F46;&#x662F;&#x4E0D;&#x7528;&#x592A;&#x62C5;&#x5FC3;<code>einsum</code>&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5728;&#x4E0B;&#x9762;&#x5185;&#x5BB9;&#x4E2D;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x5B83;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[6]:</span>
+img_gray_weighted_fancy <span class="token operator">=</span> torch<span class="token punctuation">.</span>einsum<span class="token punctuation">(</span><span class="token string">&apos;...chw,c-&gt;...hw&apos;</span><span class="token punctuation">,</span> img_t<span class="token punctuation">,</span> weights<span class="token punctuation">)</span>
+batch_gray_weighted_fancy <span class="token operator">=</span> torch<span class="token punctuation">.</span>einsum<span class="token punctuation">(</span><span class="token string">&apos;...chw,c-&gt;...hw&apos;</span><span class="token punctuation">,</span> batch_t<span class="token punctuation">,</span> weights<span class="token punctuation">)</span>
+batch_gray_weighted_fancy<span class="token punctuation">.</span>shape
+
+<span class="token comment"># Out[6]:</span>
+torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x6240;&#x770B;&#x5230;&#x7684;&#xFF0C;&#x8FD9;&#x6D89;&#x53CA;&#x5230;&#x76F8;&#x5F53;&#x591A;&#x7684;&#x8BB0;&#x8D26;&#x5DE5;&#x4F5C;(bookkeeping)&#x3002;&#x8FD9;&#x5F88;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5F53;&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x521B;&#x5EFA;&#x548C;&#x4F7F;&#x7528;&#x5F20;&#x91CF;&#x7684;&#x4F4D;&#x7F6E;&#x76F8;&#x9694;&#x5F88;&#x8FDC;&#x7684;&#x65F6;&#x5019;&#x3002;&#x8FD9;&#x5DF2;&#x7ECF;&#x5F15;&#x8D77;&#x4E86;&#x4ECE;&#x4E1A;&#x8005;&#x7684;&#x6CE8;&#x610F;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x4EBA;&#x5EFA;&#x8BAE;&#x7ED9;&#x8FD9;&#x4E2A;&#x7EF4;&#x5EA6;&#x8D77;&#x4E2A;&#x540D;&#x5B57;<a href="#jump3-3"><sup>3</sup></a>&#x3002;</p>
+<p>PyTorch 1.3 &#x589E;&#x52A0;&#x4E86;&#x547D;&#x540D;&#x5F20;&#x91CF;&#x4F5C;&#x4E3A;&#x5B9E;&#x9A8C;&#x6027;&#x529F;&#x80FD;(&#x8BF7;&#x53C2;&#x89C1; <a href="https://pytorch.org/tutorials/intermediate/named_tensor_tutorial.html" target="_blank">https://pytorch.org/tutorials/intermediate/named_tensor_tutorial.html</a> &#x548C; <a href="https://pytorch.org/docs/stable/named_tensor.html" target="_blank">https://pytorch.org/docs/stable/named_tensor.html</a>) &#x3002; &#x5F20;&#x91CF;&#x7684;factory&#x51FD;&#x6570;&#xFF0C;&#x5982;<code>tensor</code>&#x548C;<code>rand</code>&#xFF0C;&#x9700;&#x8981;&#x4E00;&#x4E2A;<code>names</code>&#x53C2;&#x6570;&#x3002;<code>names</code>&#x5E94;&#x8BE5;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5E8F;&#x5217;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[7]:</span>
+weights_named <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.2126</span><span class="token punctuation">,</span> <span class="token number">0.7152</span><span class="token punctuation">,</span> <span class="token number">0.0722</span><span class="token punctuation">]</span><span class="token punctuation">,</span> names<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&apos;channels&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+weights_named
+
+<span class="token comment"># Out[7]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.2126</span><span class="token punctuation">,</span> <span class="token number">0.7152</span><span class="token punctuation">,</span> <span class="token number">0.0722</span><span class="token punctuation">]</span><span class="token punctuation">,</span> names<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">&apos;channels&apos;</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#xFF0C;&#x5E76;&#x4E14;&#x60F3;&#x8981;&#x6DFB;&#x52A0;&#x540D;&#x79F0;&#xFF08;&#x4F46;&#x4E0D;&#x6539;&#x53D8;&#x73B0;&#x6709;&#x7684;&#x540D;&#x79F0;&#xFF09;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;&#x5B83;&#x8C03;&#x7528;refine_names&#x65B9;&#x6CD5;&#x3002;&#x4E0E;&#x7D22;&#x5F15;&#x7C7B;&#x4F3C;&#xFF0C;&#x7701;&#x7565;&#x53F7;(...)&#x5141;&#x8BB8;&#x4F60;&#x7701;&#x7565;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x7EF4;&#x5EA6;&#x3002;&#x901A;&#x8FC7;rename sibling&#x65B9;&#x6CD5;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x8986;&#x76D6;&#x6216;&#x5220;&#x9664;&#xFF08;&#x901A;&#x8FC7;&#x4F20;&#x9012;None&#xFF09;&#x73B0;&#x6709;&#x7684;&#x540D;&#x5B57;&#x3002;</p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x5F20;&#x91CF;&#x5E76;&#x60F3;&#x8981;&#x6DFB;&#x52A0;&#x540D;&#x79F0;&#xFF08;&#x4F46;&#x4E0D;&#x66F4;&#x6539;&#x73B0;&#x6709;&#x540D;&#x79F0;&#xFF09;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x4E0A;&#x8C03;&#x7528;&#x65B9;&#x6CD5;<code>fine_names</code>&#x3002; &#x4E0E;&#x7D22;&#x5F15;&#x7C7B;&#x4F3C;&#xFF0C;&#x7701;&#x7565;&#x53F7;&#xFF08;<code>...</code>&#xFF09;&#x5141;&#x8BB8;&#x60A8;&#x7701;&#x7565;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x7EF4;&#x5EA6;&#x3002;&#x901A;&#x8FC7;<code>rename</code>&#x540C;&#x7EA7;(sibling)&#x65B9;&#x6CD5;&#xFF0C;&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x8986;&#x76D6;&#x6216;&#x5220;&#x9664;&#xFF08;&#x901A;&#x8FC7;&#x4F20;&#x5165;<code>None</code>&#xFF09;&#x73B0;&#x6709;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[8]:</span>
+img_named <span class="token operator">=</span>  img_t<span class="token punctuation">.</span>refine_names<span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token string">&apos;channels&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rows&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;columns&apos;</span><span class="token punctuation">)</span>
+batch_named <span class="token operator">=</span> batch_t<span class="token punctuation">.</span>refine_names<span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token string">&apos;channels&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rows&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;columns&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;img named:&quot;</span><span class="token punctuation">,</span> img_named<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> img_named<span class="token punctuation">.</span>names<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;batch named:&quot;</span><span class="token punctuation">,</span> batch_named<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> batch_named<span class="token punctuation">.</span>names<span class="token punctuation">)</span>
+
+<span class="token comment"># Out[8]:</span>
+img named<span class="token punctuation">:</span> torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token string">&apos;channels&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rows&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;columns&apos;</span><span class="token punctuation">)</span>
+batch named<span class="token punctuation">:</span> torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token string">&apos;channels&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rows&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;columns&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x6709;&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x9664;&#x4E86;&#x5E38;&#x89C4;&#x7684;&#x7EF4;&#x5EA6;&#x68C0;&#x67E5;&#xFF08;&#x5373;&#x5C3A;&#x5BF8;&#x662F;&#x5426;&#x76F8;&#x540C;&#xFF0C;&#x6216;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5C3A;&#x5BF8;&#x662F;&#x5426;&#x4E3A;1&#x5E76;&#x53EF;&#x5E7F;&#x64AD;&#x7ED9;&#x53E6;&#x4E00;&#x4E2A;&#xFF09;&#x4E4B;&#x5916;&#xFF0C;PyTorch&#x73B0;&#x5728;&#x8FD8;&#x5C06;&#x4E3A;&#x6211;&#x4EEC;&#x68C0;&#x67E5;&#x540D;&#x79F0;&#x3002;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x5B83;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5BF9;&#x9F50;&#x7EF4;&#x5EA6;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x660E;&#x786E;&#x5730;&#x8FDB;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#x3002;<code>align_as</code>&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6DFB;&#x52A0;&#x4E86;&#x7F3A;&#x5931;&#x7EF4;&#x5EA6;&#x7684;&#x5F20;&#x91CF;&#xFF0C;&#x5E76;&#x5C06;&#x73B0;&#x6709;&#x7684;&#x7EF4;&#x5EA6;&#x6309;&#x6B63;&#x786E;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5217;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[9]:</span>
+weights_aligned <span class="token operator">=</span> weights_named<span class="token punctuation">.</span>align_as<span class="token punctuation">(</span>img_named<span class="token punctuation">)</span>
+weights_aligned<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> weights_aligned<span class="token punctuation">.</span>names
+
+<span class="token comment"># Out[9]:</span>
+<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">&apos;channels&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rows&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;columns&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x63A5;&#x53D7;&#x7EF4;&#x5EA6;&#x53C2;&#x6570;&#xFF08;&#x4F8B;&#x5982;<code>sum</code>&#xFF09;&#x7684;&#x51FD;&#x6570;&#x4E5F;&#x63A5;&#x53D7;&#x547D;&#x540D;&#x7EF4;&#x5EA6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[10]:</span>
+gray_named <span class="token operator">=</span> <span class="token punctuation">(</span>img_named <span class="token operator">*</span> weights_aligned<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token string">&apos;channels&apos;</span><span class="token punctuation">)</span>
+gray_named<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> gray_named<span class="token punctuation">.</span>names
+
+<span class="token comment"># Out[10]:</span>
+<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">&apos;rows&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;columns&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x5C1D;&#x8BD5;&#x5C06;&#x7EF4;&#x5EA6;&#x4E0E;&#x4E0D;&#x540C;&#x7684;&#x540D;&#x79F0;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5219;&#x4F1A;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">gray_named <span class="token operator">=</span> <span class="token punctuation">(</span>img_named<span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">*</span> weights_named<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token string">&apos;channels&apos;</span><span class="token punctuation">)</span>
+
+
+ attempting to broadcast dims <span class="token punctuation">[</span><span class="token string">&apos;channels&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rows&apos;</span><span class="token punctuation">,</span>
+  <span class="token string">&apos;columns&apos;</span><span class="token punctuation">]</span> <span class="token keyword">and</span> dims <span class="token punctuation">[</span><span class="token string">&apos;channels&apos;</span><span class="token punctuation">]</span><span class="token punctuation">:</span> dim <span class="token string">&apos;columns&apos;</span> <span class="token keyword">and</span> dim <span class="token string">&apos;channels&apos;</span>
+  are at the same position <span class="token keyword">from</span> the right but do <span class="token keyword">not</span> match<span class="token punctuation">.</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x5728;&#x5BF9;&#x547D;&#x540D;&#x5F20;&#x91CF;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;&#x7684;&#x51FD;&#x6570;&#x4E4B;&#x5916;&#x4F7F;&#x7528;&#x8BE5;&#x5F20;&#x91CF;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x5C06;&#x540D;&#x79F0;&#x91CD;&#x547D;&#x540D;&#x4E3A;<code>None</code>&#x6765;&#x5220;&#x9664;&#x540D;&#x79F0;&#x3002;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x4F7F;&#x6211;&#x4EEC;&#x56DE;&#x5230;&#x4E86;&#x672A;&#x547D;&#x540D;&#x7EF4;&#x5EA6;&#x7684;&#x4E16;&#x754C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[12]:</span>
+gray_plain <span class="token operator">=</span> gray_named<span class="token punctuation">.</span>rename<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+gray_plain<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> gray_plain<span class="token punctuation">.</span>names
+
+<span class="token comment"># Out[12]:</span>
+<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5728;&#x64B0;&#x5199;&#x672C;&#x6587;&#x65F6;&#xFF0C;&#x8003;&#x8651;&#x5230;&#x8BE5;&#x7279;&#x6027;&#x7684;&#x5B9E;&#x9A8C;&#x6027;&#x8D28;&#xFF0C;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x5728;&#x7D22;&#x5F15;&#x548C;&#x5BF9;&#x9F50;&#x65B9;&#x9762;&#x6D6A;&#x8D39;&#x65F6;&#x95F4;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x575A;&#x6301;&#x5728;&#x672C;&#x4E66;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x4F7F;&#x7528;&#x672A;&#x547D;&#x540D;&#x7684;&#x5F20;&#x91CF;&#x3002;&#x5982;&#x679C;PyTorch&#x8BBA;&#x575B;&#x6709;&#x4EFB;&#x4F55;&#x6307;&#x793A;&#x7684;&#x8BDD;&#xFF0C;&#x547D;&#x540D;&#x5F20;&#x91CF;&#x6709;&#x53EF;&#x80FD;&#x6D88;&#x9664;&#x8BB8;&#x591A;&#x5BF9;&#x9F50;&#x9519;&#x8BEF;&#x7684;&#x6765;&#x6E90;(&#x662F;&#x4E2A;&#x76F8;&#x5F53;&#x4EE4;&#x4EBA;&#x5934;&#x75BC;&#x7684;&#x6765;&#x6E90;)&#x3002;&#x770B;&#x770B;&#x5B83;&#x4EEC;&#x4F1A;&#x88AB;&#x591A;&#x5927;&#x7A0B;&#x5EA6;&#x5730;&#x91C7;&#x7528;&#x4F1A;&#x662F;&#x4E00;&#x4EF6;&#x6709;&#x8DA3;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<h2 id="35-&#x5F20;&#x91CF;&#x5143;&#x7D20;&#x7C7B;&#x578B;"><a name="35-&#x5F20;&#x91CF;&#x5143;&#x7D20;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#35-&#x5F20;&#x91CF;&#x5143;&#x7D20;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>3.5 <span id="chap3-5">&#x5F20;&#x91CF;&#x5143;&#x7D20;&#x7C7B;&#x578B;</span></h2>
+<p>&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x4ECB;&#x7ECD;&#x4E86;&#x5F20;&#x91CF;&#x5DE5;&#x4F5C;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;&#xFF0C;&#x4F46;&#x662F;&#x5C1A;&#x672A;&#x6D89;&#x53CA;&#x53EF;&#x4EE5;&#x5728;&#x5F20;&#x91CF;&#x4E2D;&#x5B58;&#x50A8;&#x54EA;&#x4E9B;&#x6570;&#x503C;&#x7C7B;&#x578B;&#x3002;&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x5728;3.2&#x8282;&#x4E2D;&#x6240;&#x63D0;&#x793A;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x4F7F;&#x7528;&#x6807;&#x51C6;Python&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x6700;&#x4F18;&#x7684;&#xFF0C;&#x539F;&#x56E0;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>Python&#x4E2D;&#x7684;<strong>&#x6570;&#x5B57;(Numbers)</strong> &#x662F; <strong>&#x5BF9;&#x8C61;(objects)</strong>&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6D6E;&#x70B9;&#x6570;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x53EF;&#x80FD;&#x53EA;&#x9700;&#x8981;&#x6BD4;32&#x4F4D;&#x6765;&#x8868;&#x793A;&#xFF0C;&#x800C;Python&#x4F1A;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x5177;&#x6709;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x7684;&#x5B8C;&#x6574;Python&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x79CD;&#x64CD;&#x4F5C;&#x88AB;&#x79F0;&#x4E3A;<strong>&#x88C5;&#x7BB1;(boxing)</strong>&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x5C11;&#x91CF;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x4E0D;&#x6210;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x5206;&#x914D;&#x6570;&#x767E;&#x4E07;&#x7684;&#x91CF;&#x5219;&#x6548;&#x7387;&#x5F88;&#x4F4E;&#x3002;</li>
+<li>Python&#x4E2D;&#x7684;<strong>&#x5217;&#x8868;(Lists)</strong> &#x662F;&#x4E3A;&#x4E86;&#x5BF9;&#x8C61;&#x7684;<strong>&#x987A;&#x5E8F;&#x96C6;&#x5408;(sequential collections)</strong>&#x3002;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x5411;&#x91CF;&#x7684;&#x70B9;&#x79EF;&#x6216;&#x5411;&#x91CF;&#x6C42;&#x548C;&#x7684;&#x9AD8;&#x6548;&#x64CD;&#x4F5C;&#x3002;&#x800C;&#x4E14;&#xFF0C;Python&#x5217;&#x8868;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x4F18;&#x5316;&#x5176;&#x5185;&#x5BB9;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5E03;&#x5C40;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x662F;&#x6307;&#x5411;Python&#x5BF9;&#x8C61; (&#x4EFB;&#x4F55;&#x79CD;&#x7C7B;&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x6570;&#x5B57;) &#x7684;&#x6307;&#x9488;&#x7684;&#x53EF;&#x7D22;&#x5F15;&#x96C6;&#x5408;&#x3002;&#x6700;&#x540E;&#xFF0C;Python&#x5217;&#x8868;&#x662F;&#x4E00;&#x7EF4;&#x7684;&#xFF0C;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x5217;&#x8868;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x4F46;&#x8FD9;&#x540C;&#x6837;&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x4F4E;&#x6548;&#x7684;&#x3002;</li>
+<li>&#x4E0E;&#x4F18;&#x5316;&#x3001;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x76F8;&#x6BD4;&#xFF0C;Python<strong>&#x89E3;&#x91CA;&#x5668;</strong>&#x7684;&#x901F;&#x5EA6;&#x5F88;&#x6162;&#x3002;&#x5BF9;&#x5927;&#x91CF;&#x7684;&#x6570;&#x503C;&#x6570;&#x636E;&#x96C6;&#x5408;&#x8FDB;&#x884C;&#x6570;&#x5B66;&#x8FD0;&#x7B97;&#xFF0C;&#x4F7F;&#x7528;&#x50CF;C&#x8FD9;&#x6837;&#x7684;&#x53EF;&#x7F16;&#x8BD1;&#x7684;&#x4F4E;&#x7EA7;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x4F18;&#x5316;&#x4EE3;&#x7801;&#x5DE5;&#x4F5C;&#x901F;&#x5EA6;&#x53EF;&#x4EE5;&#x5FEB;&#x5F97;&#x591A;&#x3002;</li>
+</ul>
+<p>&#x7531;&#x4E8E;&#x8FD9;&#x4E9B;&#x539F;&#x56E0;&#xFF0C;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x5E93;&#x4F9D;&#x8D56;&#x4E8E;NumPy&#x6216;&#x5F15;&#x5165;&#x4E13;&#x7528;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF08;&#x4F8B;&#x5982;PyTorch&#x5F20;&#x91CF;&#xFF09;&#x3002;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x6570;&#x503C;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x548C;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x76F8;&#x5173;&#x64CD;&#x4F5C;&#x7684;&#x9AD8;&#x6548;&#x4F4E;&#x5C42;&#x6B21;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5E76;&#x5305;&#x88C5;&#x5728;&#x4E00;&#x4E2A;&#x65B9;&#x4FBF;&#x7684;&#x9AD8;&#x7EA7;API&#x4E2D;&#x3002;&#x8981;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x5F20;&#x91CF;&#x5185;&#x7684;&#x5BF9;&#x8C61;&#x5FC5;&#x987B;&#x5168;&#x90E8;&#x662F;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x5E76;&#x4E14;PyTorch&#x5FC5;&#x987B;&#x8DDF;&#x8E2A;&#x6B64;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x3002;</p>
+<h3 id="351-&#x4F7F;&#x7528;dtype&#x6307;&#x5B9A;&#x6570;&#x503C;&#x7C7B;&#x578B;"><a name="351-&#x4F7F;&#x7528;dtype&#x6307;&#x5B9A;&#x6570;&#x503C;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#351-&#x4F7F;&#x7528;dtype&#x6307;&#x5B9A;&#x6570;&#x503C;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>3.5.1 &#x4F7F;&#x7528;dtype&#x6307;&#x5B9A;&#x6570;&#x503C;&#x7C7B;&#x578B;</h3>
+<p>&#x5F20;&#x91CF;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x50CF;<code>tensor</code>&#x3001;<code>zeros</code>&#x548C;<code>ones</code>&#x8FD9;&#x6837;&#x7684;&#x51FD;&#x6570;&#xFF09;&#x7684;<code>dtype</code>&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x4E86;&#x5F20;&#x91CF;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x6570;&#x503C;&#x6570;&#x636E;&#xFF08;d&#xFF09;&#x7C7B;&#x578B;&#x3002;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6307;&#x5B9A;&#x4E86;&#x5F20;&#x91CF;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3;&#x7684;&#x503C;&#xFF08;&#x6574;&#x6570;&#x4E0E;&#x6D6E;&#x70B9;&#x6570;&#xFF09;&#x548C;&#x6BCF;&#x4E2A;&#x503C;&#x7684;&#x5B57;&#x8282;&#x6570;&#x3002;<a href="#jump3-4"><sup>4</sup></a> <code>dtype</code>&#x53C2;&#x6570;&#x6709;&#x610F;&#x7C7B;&#x4F3C;&#x4E8E;&#x540C;&#x540D;&#x7684;&#x6807;&#x51C6;NumPy&#x53C2;&#x6570;&#x3002;&#x4E0B;&#x9762;&#x662F;<code>dtype</code>&#x53C2;&#x6570;&#x7684;&#x53EF;&#x80FD;&#x503C;&#x5217;&#x8868;:</p>
+<ul>
+<li>torch.float32&#x6216;torch.float&#xFF1A;32&#x4F4D;&#x6D6E;&#x70B9;</li>
+<li>torch.float64&#x6216;torch.double&#xFF1A;64&#x4F4D;&#xFF0C;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;</li>
+<li>torch.float16&#x6216;torch.half&#xFF1A;16&#x4F4D;&#x534A;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;</li>
+<li>torch.int8&#xFF1A;&#x5E26;&#x7B26;&#x53F7;&#x7684;8&#x4F4D;&#x6574;&#x6570;</li>
+<li>torch.uint8&#xFF1A;&#x65E0;&#x7B26;&#x53F7;&#x7684;8&#x4F4D;&#x6574;&#x6570;</li>
+<li>torch.int16&#x6216;torch.short&#xFF1A;&#x5E26;&#x7B26;&#x53F7;&#x7684;16&#x4F4D;&#x6574;&#x6570;</li>
+<li>torch.int32&#x6216;torch.int&#xFF1A;&#x5E26;&#x7B26;&#x53F7;&#x7684;32&#x4F4D;&#x6574;&#x6570;</li>
+<li>torch.int64&#x6216;torch.long&#xFF1A;&#x5E26;&#x7B26;&#x53F7;&#x7684;64&#x4F4D;&#x6574;&#x6570;</li>
+<li>torch.bool&#xFF1A;&#x5E03;&#x5C14;&#x503C;</li>
+</ul>
+<p>&#x5F20;&#x91CF;&#x7684;&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;32&#x4F4D;&#x6D6E;&#x70B9;&#x6570;&#x3002;</p>
+<h3 id="352-&#x9002;&#x5408;&#x5404;&#x79CD;&#x573A;&#x5408;&#x7684;dtype"><a name="352-&#x9002;&#x5408;&#x5404;&#x79CD;&#x573A;&#x5408;&#x7684;dtype" class="anchor-navigation-ex-anchor" href="#352-&#x9002;&#x5408;&#x5404;&#x79CD;&#x573A;&#x5408;&#x7684;dtype"><i class="fa fa-link" aria-hidden="true"></i></a>3.5.2 &#x9002;&#x5408;&#x5404;&#x79CD;&#x573A;&#x5408;&#x7684;dtype</h3>
+<p>&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x4EE5;&#x540E;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#x770B;&#x5230;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#x53D1;&#x751F;&#x7684;&#x8BA1;&#x7B97;&#x901A;&#x5E38;&#x4EE5;32&#x4F4D;&#x6D6E;&#x70B9;&#x7CBE;&#x5EA6;&#x6267;&#x884C;&#x3002; &#x66F4;&#x9AD8;&#x7684;&#x7CBE;&#x5EA6;&#xFF08;&#x4F8B;&#x5982;64&#x4F4D;&#xFF09;&#x5E76;&#x4E0D;&#x80FD;&#x6539;&#x5584;&#x6A21;&#x578B;&#x7684;&#x51C6;&#x786E;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x66F4;&#x591A;&#x7684;&#x5185;&#x5B58;&#x548C;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x3002;16&#x4F4D;&#x6D6E;&#x70B9;&#x534A;&#x7CBE;&#x5EA6;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5728;&#x6807;&#x51C6;CPU&#x4E2D;&#x5E76;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x800C;&#x5728;&#x73B0;&#x4EE3;GPU&#x4E0A;&#x63D0;&#x4F9B;&#x4E86;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x5230;&#x534A;&#x7CBE;&#x5EA6;&#x4EE5;&#x51CF;&#x5C11;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6A21;&#x578B;&#x7684;&#x5360;&#x7528;&#x7A7A;&#x95F4;&#xFF0C;&#x800C;&#x5BF9;&#x7CBE;&#x5EA6;&#x7684;&#x5F71;&#x54CD;&#x5F88;&#x5C0F;&#x3002;</p>
+<p>&#x5F20;&#x91CF;&#x53EF;&#x4EE5;&#x7528;&#x4F5C;&#x5176;&#x4ED6;&#x5F20;&#x91CF;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;PyTorch&#x671F;&#x671B;&#x7D22;&#x5F15;&#x5F20;&#x91CF;&#x5177;&#x6709;64&#x4F4D;&#x6574;&#x6570;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002; &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4EE5;&#x6574;&#x6570;&#x4E3A;&#x53C2;&#x6570;&#x7684;&#x5F20;&#x91CF;&#xFF0C;&#x4F8B;&#x5982;&#x4F7F;&#x7528;torch.tensor&#xFF08;[2&#xFF0C;2]&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;64&#x4F4D;&#x6574;&#x6570;&#x5F20;&#x91CF;&#x3002; &#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5927;&#x90E8;&#x5206;&#x65F6;&#x95F4;&#x7528;&#x4E8E;&#x5904;&#x7406;float32&#x548C;int64&#x3002;</p>
+<p>&#x5F20;&#x91CF;&#x53EF;&#x4EE5;&#x7528;&#x4F5C;&#x5176;&#x4ED6;&#x5F20;&#x91CF;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;PyTorch&#x671F;&#x671B;&#x7D22;&#x5F15;&#x5F20;&#x91CF;&#x5177;&#x6709;64&#x4F4D;&#x6574;&#x6570;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;&#x6574;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x521B;&#x5EFA;&#x5F20;&#x91CF;(&#x5982;&#x4F7F;&#x7528;<code>torch.tensor([2&#xFF0C;2]</code>)&#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;64&#x4F4D;&#x6574;&#x6570;&#x5F20;&#x91CF;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x628A;&#x5927;&#x90E8;&#x5206;&#x65F6;&#x95F4;&#x7528;&#x4E8E;&#x5904;&#x7406;<code>float32</code>&#x548C;<code>int64</code>&#x4E0A;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5173;&#x4E8E;&#x5F20;&#x91CF;&#x7684;&#x65AD;&#x8A00;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;<code>points &gt; 1.0</code>&#xFF09;&#x4F1A;&#x4EA7;&#x751F;&#x8868;&#x793A;&#x6BCF;&#x4E2A;&#x5355;&#x72EC;&#x5143;&#x7D20;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;<code>bool</code>&#x5F20;&#x91CF;.&#x7B80;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x3002;</p>
+<h3 id="353-&#x7BA1;&#x7406;&#x5F20;&#x91CF;&#x7684;dtype&#x5C5E;&#x6027;"><a name="353-&#x7BA1;&#x7406;&#x5F20;&#x91CF;&#x7684;dtype&#x5C5E;&#x6027;" class="anchor-navigation-ex-anchor" href="#353-&#x7BA1;&#x7406;&#x5F20;&#x91CF;&#x7684;dtype&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>3.5.3 &#x7BA1;&#x7406;&#x5F20;&#x91CF;&#x7684;dtype&#x5C5E;&#x6027;</h3>
+<p>&#x4E3A;&#x4E86;&#x5206;&#x914D;&#x6B63;&#x786E;&#x6570;&#x503C;&#x7C7B;&#x578B;&#x7684;&#x5F20;&#x91CF;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x6B63;&#x786E;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6307;&#x5B9A;&#x4E3A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[47]:</span>
+double_points <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span>double<span class="token punctuation">)</span>
+short_points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span>short<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBF;&#x95EE;&#x76F8;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x6765;&#x4E86;&#x89E3;&#x5F20;&#x91CF;&#x7684;<code>dtype</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[48]:</span>
+short_points<span class="token punctuation">.</span>dtype
+
+<span class="token comment"># Out[48]:</span>
+torch<span class="token punctuation">.</span>int16
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x76F8;&#x5E94;&#x7684;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x65B9;&#x6CD5;&#x5C06;&#x5F20;&#x91CF;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x8F93;&#x51FA;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x4E3A;&#x6B63;&#x786E;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x4F8B;&#x5982;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[49]:</span>
+double_points <span class="token operator">=</span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>double<span class="token punctuation">(</span><span class="token punctuation">)</span>
+short_points <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>short<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6216;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x6CD5;<code>to</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[50]:</span>
+double_points <span class="token operator">=</span> torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>double<span class="token punctuation">)</span>
+short_points <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">(</span>dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span>short<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5728;&#x540E;&#x53F0;&#xFF0C;<code>to</code>&#x68C0;&#x67E5;&#x662F;&#x5426;&#x9700;&#x8981;&#x8F6C;&#x6362;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x5C31;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x3002;&#x50CF;<code>float</code>&#x8FD9;&#x6837;&#x7684;<code>dtype&#x547D;&#x540D;</code>&#x7684;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x65B9;&#x6CD5;&#x662F;<code>to</code>&#x7684;&#x7B80;&#x5199;&#xFF0C;&#x4F46;&#x662F;<code>to</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5728;3.9&#x8282;&#x4E2D;&#x8BA8;&#x8BBA;&#x8FD9;&#x4E9B;&#x3002;</p>
+<p>&#x5728;&#x64CD;&#x4F5C;&#x4E2D;&#x6DF7;&#x5408;&#x8F93;&#x5165;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x8F93;&#x5165;&#x5C06;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x4E3A;&#x8F83;&#x5927;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x8FDB;&#x884C;32&#x4F4D;&#x8BA1;&#x7B97;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x786E;&#x4FDD;&#x6240;&#x6709;&#x8F93;&#x5165;&#xFF08;&#x6700;&#x591A;&#xFF09;&#x662F;32&#x4F4D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[51]:</span>
+points_64 <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span>double<span class="token punctuation">)</span>
+points_short <span class="token operator">=</span> points_64<span class="token punctuation">.</span>to<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>short<span class="token punctuation">)</span>
+points_64 <span class="token operator">*</span> points_short  <span class="token comment"># works from PyTorch 1.3 onwards</span>
+
+<span class="token comment"># Out[51]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span>float64<span class="token punctuation">)</span>
+</code></pre>
+<pre class="language-"><code class="lang-python">&#x5176;&#x4E2D;&#xFF0C;
+<span class="token comment"># In[51]:</span>
+points_64 <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>torch<span class="token punctuation">.</span>double<span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>rand&#x5C06;&#x5F20;&#x91CF;&#x5143;&#x7D20;&#x521D;&#x59CB;&#x5316;&#x4E3A;<span class="token number">0</span>&#x5230;<span class="token number">1</span>&#x4E4B;&#x95F4;&#x7684;&#x968F;&#x673A;&#x6570;&#x3002;
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<h2 id="36-&#x5F20;&#x91CF;api"><a name="36-&#x5F20;&#x91CF;api" class="anchor-navigation-ex-anchor" href="#36-&#x5F20;&#x91CF;api"><i class="fa fa-link" aria-hidden="true"></i></a>3.6 <span id="chap3-6">&#x5F20;&#x91CF;API</span></h2>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x4E86;&#x4EC0;&#x4E48;&#x662F;PyTorch&#x5F20;&#x91CF;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x7ED3;&#x675F;&#x4E4B;&#x524D;&#xFF0C;&#x503C;&#x5F97;&#x4E00;&#x770B;&#x7684;&#x662F; PyTorch&#x63D0;&#x4F9B;&#x7684;&#x5F20;&#x91CF;&#x64CD;&#x4F5C;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x7528;&#x5904;&#x7684;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5BF9;API&#x6709;&#x4E00;&#x4E2A;&#x5927;&#x81F4;&#x7684;&#x4E86;&#x89E3;&#xFF0C;&#x5E76;&#x5C31;&#x5982;&#x4F55;&#x5728; <a href="http://pytorch.org/docs" target="_blank">http://pytorch.org/docs</a> &#x7684;&#x5728;&#x7EBF;&#x6587;&#x6863;&#x4E2D;&#x627E;&#x5230;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#x63D0;&#x4F9B;&#x4E00;&#x4E9B;&#x6307;&#x5BFC;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x5173;&#x4E8E;&#x5F20;&#x91CF;&#x548C;&#x5F20;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x53EF;&#x4EE5;&#x5728; <code>torch</code> &#x6A21;&#x5757;&#x4E2D;&#x627E;&#x5230;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x5F20;&#x91CF;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x8C03;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x9047;&#x5230;&#x7684;<code>transpose</code>&#x51FD;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x5728; <code>torch</code> &#x6A21;&#x5757;&#x4E2D;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[71]:</span>
+a <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+a_t <span class="token operator">=</span> torch<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+a<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> a_t<span class="token punctuation">.</span>shape
+
+<span class="token comment"># Out[71]:</span>
+<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6216;&#x8005;&#x4F5C;&#x4E3A;&#x5F20;&#x91CF;<code>a</code>&#x7684;&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[72]:</span>
+a <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+a_t <span class="token operator">=</span> a<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+a<span class="token punctuation">.</span>shape<span class="token punctuation">,</span> a_t<span class="token punctuation">.</span>shape
+
+<span class="token comment"># Out[72]:</span>
+<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#x6CA1;&#x6709;&#x533A;&#x522B;&#xFF0C;&#x53EF;&#x4EE5;&#x4E92;&#x6362;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x524D;&#x9762;&#x63D0;&#x5230;&#x4E86;&#x5728;&#x7EBF;&#x6587;&#x6863;&#xFF08;<a href="http://pytorch.org/docs)&#x3002;&#x5B83;&#x4EEC;&#x975E;&#x5E38;&#x8BE6;&#x5C3D;&#xFF0C;&#x800C;&#x4E14;&#x6761;&#x7406;&#x6E05;&#x6670;&#xFF0C;&#x5F20;&#x91CF;&#x64CD;&#x4F5C;&#x88AB;&#x5206;&#x6210;&#x4E86;&#x51E0;&#x7EC4;&#xFF1A;" target="_blank">http://pytorch.org/docs)&#x3002;&#x5B83;&#x4EEC;&#x975E;&#x5E38;&#x8BE6;&#x5C3D;&#xFF0C;&#x800C;&#x4E14;&#x6761;&#x7406;&#x6E05;&#x6670;&#xFF0C;&#x5F20;&#x91CF;&#x64CD;&#x4F5C;&#x88AB;&#x5206;&#x6210;&#x4E86;&#x51E0;&#x7EC4;&#xFF1A;</a></p>
+<ul>
+<li><strong>&#x521B;&#x5EFA;&#x64CD;&#x4F5C;(Creation ops)</strong> --&#x6784;&#x9020;&#x5F20;&#x91CF;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982; <code>ones</code> &#x548C; <code>from_numpy</code></li>
+<li><strong>&#x7D22;&#x5F15;&#x3001;&#x5207;&#x7247;&#x3001;&#x8FDE;&#x63A5;&#x3001;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;(indexing, slicing, joining, mutating ops)</strong> --&#x6539;&#x53D8;&#x5F20;&#x91CF;&#x7684;&#x5F62;&#x72B6;&#x3001;&#x6B65;&#x957F;&#x6216;&#x5185;&#x5BB9;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5982;<code>transpose</code>&#x3002;</li>
+<li><strong>&#x6570;&#x5B66;&#x8FD0;&#x7B97;(Math ops)</strong>--&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x6765;&#x64CD;&#x4F5C;&#x5F20;&#x91CF;&#x5185;&#x5BB9;&#x7684;&#x51FD;&#x6570;&#x3002;<ul>
+<li>&#x9010;&#x70B9;&#x8FD0;&#x7B97;(Pointwise ops)--&#x901A;&#x8FC7;&#x5C06;&#x51FD;&#x6570;&#x72EC;&#x7ACB;&#x5730;&#x5E94;&#x7528;&#x4E8E;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x6765;&#x83B7;&#x5F97;&#x65B0;&#x5F20;&#x91CF;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5982;<code>abs</code>&#x548C;<code>cos</code></li>
+<li>&#x5F52;&#x7EA6;&#x8FD0;&#x7B97;(Reduction ops)--&#x901A;&#x8FC7;&#x904D;&#x5386;&#x5F20;&#x91CF;&#x8BA1;&#x7B97;&#x805A;&#x5408;&#x503C;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5982;<code>mean</code>, <code>std</code>, &#x548C;<code>norm</code></li>
+<li>&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;(Comparison ops)--&#x7528;&#x4E8E;&#x8BC4;&#x4F30;&#x5F20;&#x91CF;&#x4E2D;&#x6570;&#x5B57;&#x5173;&#x7CFB;&#x65AD;&#x8A00;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5982;<code>equal</code>&#x548C;<code>max</code></li>
+<li>&#x9891;&#x8C31;&#x8FD0;&#x7B97;(Spectral ops)--&#x53D8;&#x6362;&#x5230;&#x9891;&#x57DF;&#x5E76;&#x5728;&#x9891;&#x57DF;&#x4E2D;&#x8FD0;&#x7B97;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5982;<code>stft</code>&#x548C;<code>hamming_window</code></li>
+<li>&#x5176;&#x4ED6;&#x8FD0;&#x7B97;(Other operations)--&#x5BF9;&#x5411;&#x91CF;(&#x5982;<code>cross</code>)&#x6216;&#x77E9;&#x9635;(&#x5982;<code>trace</code>)&#x8FDB;&#x884C;&#x8FD0;&#x7B97;&#x7684;&#x7279;&#x6B8A;&#x51FD;&#x6570;&#x3002;</li>
+<li>BLAS&#x548C;LAPACK&#x8FD0;&#x7B97;--&#x9075;&#x5FAA;&#x57FA;&#x672C;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x5B50;&#x7A0B;&#x5E8F;&#xFF08;BLAS&#xFF09;&#x89C4;&#x8303;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x6807;&#x91CF;&#xFF0C;&#x77E2;&#x91CF;-&#x77E2;&#x91CF;&#xFF0C;&#x77E9;&#x9635;-&#x77E2;&#x91CF;&#x548C;&#x77E9;&#x9635;-&#x77E9;&#x9635;&#x8FD0;&#x7B97;</li>
+</ul>
+</li>
+<li><strong>&#x968F;&#x673A;&#x62BD;&#x6837;(Random sampling)</strong>--&#x901A;&#x8FC7;&#x4ECE;&#x6982;&#x7387;&#x5206;&#x5E03;&#x4E2D;&#x968F;&#x673A;&#x62BD;&#x53D6;&#x6765;&#x751F;&#x6210;&#x503C;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5982;<code>randn</code>&#x548C;<code>normal</code></li>
+<li><strong>&#x5E8F;&#x5217;&#x5316;(Serialization)</strong>--&#x4FDD;&#x5B58;&#x548C;&#x52A0;&#x8F7D;&#x5F20;&#x91CF;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5982;<code>load</code>&#x548C;<code>save</code></li>
+<li><strong>&#x5E76;&#x884C;&#x5316;(Parallelism)</strong>--&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5E76;&#x884C;CPU&#x6267;&#x884C;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x91CF;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5982;<code>set_num_thread</code></li>
+</ul>
+<p>&#x82B1;&#x4E00;&#x4E9B;&#x65F6;&#x95F4;&#x6765;&#x4F7F;&#x7528;&#x5E38;&#x89C4;&#x7684;&#x5F20;&#x91CF;API&#x3002;&#x672C;&#x7AE0;&#x63D0;&#x4F9B;&#x4E86;&#x542F;&#x7528;&#x8FD9;&#x79CD;&#x4EA4;&#x4E92;&#x5F0F;&#x63A2;&#x7D22;&#x7684;&#x6240;&#x6709;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#x3002;&#x4ECE;&#x4E0B;&#x4E00;&#x7AE0;&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x5C06;&#x5728;&#x672C;&#x4E66;&#x4E2D;&#x9047;&#x5230;&#x4E00;&#x4E9B;&#x5F20;&#x91CF;&#x8FD0;&#x7B97;&#x3002;</p>
+<h2 id="37-&#x5F20;&#x91CF;&#xFF1A;&#x5BF9;&#x5B58;&#x50A8;&#x7684;&#x56FE;&#x5F62;&#x5316;"><a name="37-&#x5F20;&#x91CF;&#xFF1A;&#x5BF9;&#x5B58;&#x50A8;&#x7684;&#x56FE;&#x5F62;&#x5316;" class="anchor-navigation-ex-anchor" href="#37-&#x5F20;&#x91CF;&#xFF1A;&#x5BF9;&#x5B58;&#x50A8;&#x7684;&#x56FE;&#x5F62;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>3.7 <span id="chap3-7">&#x5F20;&#x91CF;&#xFF1A;&#x5BF9;&#x5B58;&#x50A8;&#x7684;&#x56FE;&#x5F62;&#x5316;</span></h2>
+<p>&#x73B0;&#x5728;&#x662F;&#x65F6;&#x5019;&#x8BA9;&#x6211;&#x4EEC;&#x66F4;&#x4ED4;&#x7EC6;&#x5730;&#x770B;&#x770B;&#x4EE3;&#x7801;&#x7684;&#x5B9E;&#x73B0;&#x4E86;&#x3002;&#x5F20;&#x91CF;&#x4E2D;&#x7684;&#x503C;&#x88AB;&#x5206;&#x914D;&#x5728;&#x7531;<code>torch.Storage</code>&#x5B9E;&#x4F8B;&#x7BA1;&#x7406;&#x7684;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#x5757;&#x4E2D;&#x3002;&#x4E00;&#x4E2A;storage&#x4E00;&#x4E2A;&#x7531;&#x6570;&#x5B57;&#x6570;&#x636E;&#x7EC4;&#x6210;&#x7684;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF1A;&#x5373;&#x5305;&#x542B;&#x7ED9;&#x5B9A;&#x7C7B;&#x578B;&#x6570;&#x5B57;&#x7684;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#x5757;&#xFF0C;&#x4F8B;&#x5982; <code>float</code>&#xFF08;32 &#x4F4D;&#x4EE3;&#x8868;&#x6D6E;&#x70B9;&#x6570;&#xFF09;&#x6216; <code>int64</code>&#xFF08;64 &#x4F4D;&#x4EE3;&#x8868;&#x6574;&#x6570;&#xFF09;&#x3002;PyTorch&#x5F53;&#x4E2D; <code>Tensor</code> &#x5B9E;&#x4F8B;&#x5C31;&#x662F;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;(<code>torage</code>)&#x5B9E;&#x4F8B;&#x7684;&#x4F53;&#x73B0;&#xFF0C;&#x5B83;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x504F;&#x79FB;&#x91CF;&#x548C;&#x6BCF;&#x4E2A;&#x7EF4;&#x5EA6;&#x7684;&#x6B65;&#x957F;(stride)&#x6765;&#x7D22;&#x5F15;&#x5230;&#x8BE5;&#x5B58;&#x50A8;&#x3002;<a href="#jump3-5"><sup>5</sup></a></p>
+<center>&#x56FE;3.4 Tensors&#x662F;Storage&#x5B9E;&#x4F8B;&#x7684;&#x89C6;&#x56FE;</center>
+
+<div align="center">
+<img src="../img/Chap3/3-4.png">
+</div>
+
+<p>&#x591A;&#x4E2A;&#x5F20;&#x91CF;&#x53EF;&#x4EE5;&#x7D22;&#x5F15;&#x540C;&#x4E00;&#x5B58;&#x50A8;&#xFF0C;&#x5373;&#x4F7F;&#x5B83;&#x4EEC;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x7D22;&#x5F15;&#x5E76;&#x4E0D;&#x76F8;&#x540C;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x56FE;3.4&#x4E2D;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x5728;3.2&#x8282;&#x4E2D;&#x8BF7;&#x6C42;<code>points[0]</code>&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x7684;&#x662F;&#x4EE5;<code>points</code>&#x5F20;&#x91CF;&#x4FDD;&#x5B58;&#x7684;&#x540C;&#x4E00;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x2014;&#x2014;&#x4E0D;&#x662F;&#x5B83;&#x7684;&#x5168;&#x90E8;&#xFF0C;&#x5E76;&#x662F;&#x5177;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7EF4;&#x5EA6;&#xFF08;1D&#x4E0E;2D&#xFF09;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x57FA;&#x7840;&#x5185;&#x5B58;&#x4EC5;&#x5206;&#x914D;&#x4E00;&#x6B21;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x65E0;&#x8BBA;<code>Storage</code>&#x5B9E;&#x4F8B;&#x7BA1;&#x7406;&#x7684;&#x6570;&#x636E;&#x5927;&#x5C0F;&#x5982;&#x4F55;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5B8C;&#x6210;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x5907;&#x7528;&#x5F20;&#x91CF;&#x89C6;&#x56FE;&#x7684;&#x521B;&#x5EFA;&#x3002;</p>
+<h3 id="371-&#x7D22;&#x5F15;&#x5230;&#x5B58;&#x50A8;"><a name="371-&#x7D22;&#x5F15;&#x5230;&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#371-&#x7D22;&#x5F15;&#x5230;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>3.7.1 &#x7D22;&#x5F15;&#x5230;&#x5B58;&#x50A8;</h3>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x5728;2D&#x70B9;&#x4E2D;&#x5B9E;&#x9645;&#x4E0A;&#x5982;&#x4F55;&#x5EFA;&#x7ACB;&#x5B58;&#x50A8;&#x7D22;&#x5F15;&#x3002; &#x4F7F;&#x7528;<code>.storage</code>&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7ED9;&#x5B9A;&#x5F20;&#x91CF;&#x7684;&#x5B58;&#x50A8;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[17]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+points<span class="token punctuation">.</span>storage<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[17]:</span>
+ <span class="token number">4.0</span>
+ <span class="token number">1.0</span>
+ <span class="token number">5.0</span>
+ <span class="token number">3.0</span>
+ <span class="token number">2.0</span>
+ <span class="token number">1.0</span>
+<span class="token punctuation">[</span>torch<span class="token punctuation">.</span>FloatStorage of size <span class="token number">6</span><span class="token punctuation">]</span>
+</code></pre>
+<p>&#x5C3D;&#x7BA1;&#x5F20;&#x91CF;&#x62A5;&#x544A;&#x81EA;&#x5DF1;&#x6709;&#x4E09;&#x884C;&#x4E24;&#x5217;&#xFF0C;&#x4F46;&#x5B83;&#x4E0B;&#x9762;&#x7684;&#x5B58;&#x50A8;&#x662F;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x4E3A;6&#x7684;&#x8FDE;&#x7EED;&#x6570;&#x7EC4;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x610F;&#x4E49;&#x4E0A;&#xFF0C;&#x5F20;&#x91CF;&#x53EA;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x5C06;&#x4E00;&#x5BF9;&#x7D22;&#x5F15;&#x8F6C;&#x6362;&#x4E3A;&#x5B58;&#x50A8;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x4F4D;&#x7F6E;&#x3002;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x7D22;&#x5F15;&#x5230;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[18]:</span>
+points_storage <span class="token operator">=</span> points<span class="token punctuation">.</span>storage<span class="token punctuation">(</span><span class="token punctuation">)</span>
+points_storage<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Out[18]:</span>
+<span class="token number">4.0</span>
+
+<span class="token comment"># In[19]:</span>
+points<span class="token punctuation">.</span>storage<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Out[19]:</span>
+<span class="token number">1.0</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4E0D;&#x80FD;&#x7528;&#x4E24;&#x4E2A;&#x7D22;&#x5F15;&#x6765;&#x7D22;&#x5F15;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x5F20;&#x91CF;&#x7684;&#x5B58;&#x50A8;&#x3002;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x7684;&#x5E03;&#x5C40;&#x603B;&#x662F;&#x4E00;&#x7EF4;&#x7684;&#xFF0C;&#x4E0D;&#x7BA1;&#x53EF;&#x80FD;&#x5F15;&#x7528;&#x5B83;&#x7684;&#x4EFB;&#x4F55;&#x548C;&#x6240;&#x6709;&#x5F20;&#x91CF;&#x7684;&#x7EF4;&#x5EA6;&#x5982;&#x4F55;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x4E00;&#x70B9;&#x4E0A;&#xFF0C;&#x66F4;&#x6539;&#x5B58;&#x50A8;&#x7684;&#x503C;&#x4F1A;&#x5BFC;&#x81F4;&#x66F4;&#x6539;&#x5176;&#x5F15;&#x7528;&#x5F20;&#x91CF;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x8DB3;&#x4E3A;&#x5947;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[20]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+points_storage <span class="token operator">=</span> points<span class="token punctuation">.</span>storage<span class="token punctuation">(</span><span class="token punctuation">)</span>
+points_storage<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2.0</span>
+points
+
+<span class="token comment"># Out[20]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="372-&#x4FEE;&#x6539;&#x5B58;&#x50A8;&#x7684;&#x503C;&#xFF1A;&#x5C31;&#x5730;&#x64CD;&#x4F5C;&#xFF08;in-place-operations"><a name="372-&#x4FEE;&#x6539;&#x5B58;&#x50A8;&#x7684;&#x503C;&#xFF1A;&#x5C31;&#x5730;&#x64CD;&#x4F5C;&#xFF08;in-place-operations" class="anchor-navigation-ex-anchor" href="#372-&#x4FEE;&#x6539;&#x5B58;&#x50A8;&#x7684;&#x503C;&#xFF1A;&#x5C31;&#x5730;&#x64CD;&#x4F5C;&#xFF08;in-place-operations"><i class="fa fa-link" aria-hidden="true"></i></a>3.7.2 &#x4FEE;&#x6539;&#x5B58;&#x50A8;&#x7684;&#x503C;&#xFF1A;&#x5C31;&#x5730;&#x64CD;&#x4F5C;&#xFF08;In-place operations)</h3>
+<p>&#x9664;&#x4E86;&#x4E0A;&#x4E00;&#x8282;&#x4ECB;&#x7ECD;&#x7684;&#x5BF9;&#x5F20;&#x91CF;&#x7684;&#x64CD;&#x4F5C;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x5C11;&#x91CF;&#x7684;&#x64CD;&#x4F5C;&#x53EA;&#x4F5C;&#x4E3A;<code>Tensor</code>&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x5B58;&#x5728;&#x3002;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x540D;&#x79F0;&#x4E2D;&#x7684;&#x4E0B;&#x5212;&#x7EBF;&#x6765;&#x8BC6;&#x522B;&#xFF0C;&#x6BD4;&#x5982;<code>zero_</code>&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x8BE5;&#x65B9;&#x6CD5;&#x901A;&#x8FC7;<strong>&#x5C31;&#x5730;(in-place)&#x4FEE;&#x6539;</strong>&#x8F93;&#x5165;&#x800C;&#x4E0D;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8F93;&#x51FA;&#x5F20;&#x91CF;&#x5E76;&#x8FD4;&#x56DE;&#x5B83;&#x3002;&#x4F8B;&#x5982;&#xFF0C;<code>zero_</code>&#x65B9;&#x6CD5;&#x5C06;&#x8F93;&#x5165;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7F6E;&#x4E3A;&#x96F6;&#x3002;&#x4EFB;&#x4F55;<strong>&#x6CA1;&#x6709;</strong>&#x5C3E;&#x90E8;&#x4E0B;&#x5212;&#x7EBF;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x6E90;&#x5F20;&#x91CF;&#xFF0C;&#x800C;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5F20;&#x91CF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[73]:</span>
+a <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[74]:</span>
+a<span class="token punctuation">.</span>zero_<span class="token punctuation">(</span><span class="token punctuation">)</span>
+a
+
+<span class="token comment"># Out[74]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="38-&#x5F20;&#x91CF;&#x5143;&#x6570;&#x636E;&#xFF1A;&#x5927;&#x5C0F;size&#x3001;&#x504F;&#x79FB;offset&#x548C;&#x6B65;&#x957F;stride"><a name="38-&#x5F20;&#x91CF;&#x5143;&#x6570;&#x636E;&#xFF1A;&#x5927;&#x5C0F;size&#x3001;&#x504F;&#x79FB;offset&#x548C;&#x6B65;&#x957F;stride" class="anchor-navigation-ex-anchor" href="#38-&#x5F20;&#x91CF;&#x5143;&#x6570;&#x636E;&#xFF1A;&#x5927;&#x5C0F;size&#x3001;&#x504F;&#x79FB;offset&#x548C;&#x6B65;&#x957F;stride"><i class="fa fa-link" aria-hidden="true"></i></a>3.8 <span id="chap3-8">&#x5F20;&#x91CF;&#x5143;&#x6570;&#x636E;&#xFF1A;&#x5927;&#x5C0F;(size)&#x3001;&#x504F;&#x79FB;(offset)&#x548C;&#x6B65;&#x957F;(stride)</span></h2>
+<p>&#x4E3A;&#x4E86;&#x7D22;&#x5F15;&#x5B58;&#x50A8;(storage)&#xFF0C;&#x5F20;&#x91CF;&#x4F9D;&#x8D56;&#x4E8E;&#x51E0;&#x6761;&#x4FE1;&#x606F;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x5B58;&#x50A8;&#xFF0C;&#x660E;&#x786E;&#x5730;&#x5B9A;&#x4E49;&#x5B83;&#x4EEC;&#xFF1A;&#x5927;&#x5C0F;(size)&#x3001;&#x504F;&#x79FB;(offset)&#x548C;&#x6B65;&#x957F;(stride)&#x3002;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x5982;&#x56FE;3.5&#x6240;&#x793A;&#x3002;&#x5927;&#x5C0F;&#xFF08;&#x6216;&#x5F62;&#x72B6;shape&#xFF0C;&#x4EE5;NumPy&#x7684;&#x8BF4;&#x6CD5;&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;(tuple)&#xFF0C;&#x6307;&#x793A;&#x5F20;&#x91CF;&#x8868;&#x793A;&#x7684;&#x6BCF;&#x4E2A;&#x7EF4;&#x5EA6;&#x4E0A;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x5B58;&#x50A8;&#x7684;&#x504F;&#x79FB;&#x662F;&#x4E0E;&#x5F20;&#x91CF;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x5B58;&#x50A8;&#x4E2D;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x6B65;&#x957F;&#x662F;&#x5B58;&#x50A8;&#x4E2D;&#x9700;&#x8981;&#x8DF3;&#x8FC7;&#x7684;&#x5143;&#x7D20;&#x6570;&#x91CF;&#xFF0C;&#x4EE5;&#x4FBF;&#x6CBF;&#x6BCF;&#x4E2A;&#x7EF4;&#x5EA6;&#x83B7;&#x53D6;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;</p>
+<center>&#x56FE;3.5 &#x5F20;&#x91CF;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x5927;&#x5C0F;&#x548C;&#x6B65;&#x957F;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x3002;&#x5F20;&#x91CF;&#x5728;&#x8FD9;&#x91CC;&#x662F;&#x8F83;&#x5927;&#x5B58;&#x50A8;&#x7684;&#x89C6;&#x56FE;&#xFF0C;&#x5C31;&#x50CF;&#x5728;&#x521B;&#x5EFA;&#x8F83;&#x5927;&#x5F20;&#x91CF;&#x65F6;&#x53EF;&#x80FD;&#x5DF2;&#x5206;&#x914D;&#x7684;&#x5B58;&#x50A8;&#x90A3;&#x6837;</center>
+
+<div align="center">
+<img src="../img/Chap3/3-5.png">
+</div>
+
+<h3 id="381-&#x53E6;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x7684;&#x5B58;&#x50A8;&#x89C6;&#x56FE;"><a name="381-&#x53E6;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x7684;&#x5B58;&#x50A8;&#x89C6;&#x56FE;" class="anchor-navigation-ex-anchor" href="#381-&#x53E6;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x7684;&#x5B58;&#x50A8;&#x89C6;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>3.8.1 &#x53E6;&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x7684;&#x5B58;&#x50A8;&#x89C6;&#x56FE;</h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x63D0;&#x4F9B;&#x76F8;&#x5E94;&#x7684;&#x7D22;&#x5F15;&#x6765;&#x83B7;&#x5F97;&#x5F20;&#x91CF;&#x4E2D;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x70B9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[21]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+second_point <span class="token operator">=</span> points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+second_point<span class="token punctuation">.</span>storage_offset<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[21]:</span>
+<span class="token number">2</span>
+
+<span class="token comment"># In[22]:</span>
+second_point<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[22]:</span>
+torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x751F;&#x6210;&#x7684;&#x5F20;&#x91CF;&#x5728;&#x5B58;&#x50A8;&#x4E2D;&#x7684;&#x504F;&#x79FB;&#x4E3A;2&#xFF08;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8DF3;&#x8FC7;&#x7B2C;&#x4E00;&#x4E2A;&#x70B9;&#xFF0C;&#x5B83;&#x6709;&#x4E24;&#x9879;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x7531;&#x4E8E;&#x5F20;&#x91CF;&#x662F;&#x4E00;&#x7EF4;&#x7684;&#xFF0C;size&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;<code>Size</code>&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x4E0E;&#x5F20;&#x91CF;&#x5BF9;&#x8C61;<code>shape</code>&#x5C5E;&#x6027;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x4FE1;&#x606F;&#x76F8;&#x540C;:</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[23]:</span>
+second_point<span class="token punctuation">.</span>shape
+
+<span class="token comment"># Out[23]:</span>
+torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>stride&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#xFF0C;&#x8868;&#x793A;&#x5F53;&#x7D22;&#x5F15;&#x5728;&#x6BCF;&#x4E2A;&#x7EF4;&#x5EA6;&#x4E0A;&#x589E;&#x52A0;1&#x65F6;&#x5FC5;&#x987B;&#x8DF3;&#x8FC7;&#x7684;&#x5B58;&#x50A8;&#x5143;&#x7D20;&#x7684;&#x6570;&#x91CF;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x7684;<code>points</code>&#x5F20;&#x91CF;&#x7684;&#x6B65;&#x957F;&#x4E3A;<code>(2&#xFF0C;1)</code>:</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[24]:</span>
+points<span class="token punctuation">.</span>stride<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[24]:</span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5728;2D&#x5F20;&#x91CF;&#x4E2D;&#x8BBF;&#x95EE;&#x5143;&#x7D20;<code>i&#xFF0C;j</code>&#x7684;&#x7ED3;&#x679C;&#x662F;&#x8BBF;&#x95EE;&#x5B58;&#x50A8;&#x5668;&#x4E2D;&#x7684;<code>storage_offset + stride [0] * i + stride [1] * j</code>&#x5143;&#x7D20;&#x3002;&#x504F;&#x79FB;&#x901A;&#x5E38;&#x4E3A;&#x96F6;&#xFF1B;&#x5982;&#x679C;&#x6B64;&#x5F20;&#x91CF;&#x662F;&#x4E3A;&#x5BB9;&#x7EB3;&#x66F4;&#x5927;&#x5F20;&#x91CF;&#x800C;&#x521B;&#x5EFA;&#x7684;&#x5B58;&#x50A8;&#x7684;&#x89C6;&#x56FE;&#xFF0C;&#x5219;&#x504F;&#x79FB;&#x91CF;&#x53EF;&#x80FD;&#x4E3A;&#x6B63;&#x503C;&#x3002;</p>
+<p><code>Tensor</code>&#x548C;<code>Storage</code>&#x4E4B;&#x95F4;&#x7684;&#x8FD9;&#x79CD;&#x95F4;&#x63A5;&#x6027;&#x4F7F;&#x5F97;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x7684;&#x5F00;&#x9500;&#x53D8;&#x5F97;&#x5F88;&#x4F4E;&#xFF0C;&#x6BD4;&#x5982;&#x8F6C;&#x7F6E;&#x5F20;&#x91CF;&#x6216;&#x63D0;&#x53D6;&#x5B50;&#x5F20;&#x91CF;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x91CD;&#x65B0;&#x5206;&#x914D;&#x3002;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x7684;&#x662F;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5305;&#x62EC;&#x4E0D;&#x540C;&#x5927;&#x5C0F;&#x3001;&#x5B58;&#x50A8;&#x504F;&#x79FB;&#x91CF;&#x6216;&#x6B65;&#x957F;&#x7684;<code>Tensor</code>&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x7D22;&#x5F15;&#x7279;&#x5B9A;&#x70B9;&#x5E76;&#x770B;&#x5230;&#x5B58;&#x50A8;&#x504F;&#x79FB;&#x91CF;&#x589E;&#x52A0;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x63D0;&#x53D6;&#x4E86;&#x4E00;&#x4E2A;&#x5B50;&#x5F20;&#x91CF;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x5927;&#x5C0F;&#x548C;&#x6B65;&#x957F;&#x662F;&#x5982;&#x4F55;&#x53D8;&#x5316;&#x7684;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[25]:</span>
+second_point <span class="token operator">=</span> points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+second_point<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[25]:</span>
+torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[26]:</span>
+second_point<span class="token punctuation">.</span>storage_offset<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[26]:</span>
+<span class="token number">2</span>
+
+<span class="token comment"># In[27]:</span>
+second_point<span class="token punctuation">.</span>stride<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[27]:</span>
+<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5219;&#x662F;&#xFF0C;&#x5982;&#x6211;&#x4EEC;&#x6240;&#x671F;&#x671B;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x5B50;&#x5F20;&#x91CF;&#x5177;&#x6709;&#x8F83;&#x5C0F;&#x7684;&#x7EF4;&#x5EA6;&#xFF0C;&#x540C;&#x65F6;&#x4ECD;&#x7D22;&#x5F15;&#x4E0E;&#x539F;&#x59CB;&#x7684;<code>points</code>&#x5F20;&#x91CF;&#x76F8;&#x540C;&#x7684;&#x5B58;&#x50A8;&#x3002;&#x8FD9;&#x4E5F;&#x610F;&#x5473;&#x7740;&#x66F4;&#x6539;&#x5B50;&#x5F20;&#x91CF;&#x5C06;&#x5BF9;&#x539F;&#x59CB;&#x5F20;&#x91CF;&#x4EA7;&#x751F;&#x526F;&#x4F5C;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[28]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+second_point <span class="token operator">=</span> points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+second_point<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">10.0</span>
+points
+
+<span class="token comment"># Out[28]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span>  <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x64CD;&#x4F5C;&#x53EF;&#x80FD;&#x5E76;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x62F7;&#x8D1D;&#x5B50;&#x5F20;&#x91CF;&#x7684;&#x503C;&#x5230;&#x4E00;&#x4EFD;&#x65B0;&#x7684;&#x5F20;&#x91CF;&#x91CC;&#x9762;&#x53BB;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[29]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+second_point <span class="token operator">=</span> points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clone<span class="token punctuation">(</span><span class="token punctuation">)</span>
+second_point<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">10.0</span>
+points
+
+<span class="token comment"># Out[29]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="382-&#x65E0;&#x9700;&#x590D;&#x5236;&#x7684;&#x8F6C;&#x7F6E;"><a name="382-&#x65E0;&#x9700;&#x590D;&#x5236;&#x7684;&#x8F6C;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#382-&#x65E0;&#x9700;&#x590D;&#x5236;&#x7684;&#x8F6C;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>3.8.2 &#x65E0;&#x9700;&#x590D;&#x5236;&#x7684;&#x8F6C;&#x7F6E;</h3>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6765;&#x8BD5;&#x8BD5;&#x8F6C;&#x7F6E;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x91C7;&#x7528;<code>points</code>&#x5F20;&#x91CF;&#xFF0C;&#x5B83;&#x5728;&#x884C;&#x4E2D;&#x6709;&#x5355;&#x72EC;&#x7684;&#x70B9;&#xFF0C;&#x5728;&#x5217;&#x4E2D;&#x6709;&#x5BF9;&#x5E94;&#x7684;X&#x548C;Y&#x5750;&#x6807;&#xFF0C;&#x5C06;&#x4ED6;&#x8F6C;&#x7F6E;&#xFF0C;&#x4F7F;&#x5355;&#x4E2A;&#x70B9;&#x6362;&#x5230;&#x5217;&#x4E2D;&#x3002;&#x6211;&#x4EEC;&#x501F;&#x6B64;&#x673A;&#x4F1A;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;<code>t</code>&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x662F;&#x4E8C;&#x7EF4;&#x5F20;&#x91CF;&#x8F6C;&#x7F6E;&#x7684;&#x901F;&#x8BB0;&#x66FF;&#x4EE3;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[30]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+points
+
+<span class="token comment"># Out[30]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[31]:</span>
+points_t <span class="token operator">=</span> points<span class="token punctuation">.</span>t<span class="token punctuation">(</span><span class="token punctuation">)</span>
+points_t
+
+<span class="token comment"># Out[31]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>&#x8D34;&#x58EB;&#xFF1A;&#x4E3A;&#x4E86;&#x5E2E;&#x52A9;&#x60A8;&#x66F4;&#x597D;&#x5730;&#x7406;&#x89E3;&#x5F20;&#x91CF;&#x7684;&#x539F;&#x7406;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x672C;&#x8282;&#x4E2D;&#x5B66;&#x4E60;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x4E0D;&#x59A8;&#x62FF;&#x8D77;&#x4E00;&#x652F;&#x94C5;&#x7B14;&#x548C;&#x4E00;&#x5F20;&#x7EB8;&#xFF0C;&#x5728;&#x56FE;3.5&#x4E2D;&#x8FD9;&#x6837;&#x7684;&#x56FE;&#x8868;&#x4E0A;&#x6D82;&#x9E26;&#x3002;</p>
+</blockquote>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5730;&#x9A8C;&#x8BC1;&#x4E24;&#x4E2A;&#x5F20;&#x91CF;&#x5171;&#x4EAB;&#x76F8;&#x540C;&#x7684;&#x5B58;&#x50A8;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[32]:</span>
+<span class="token builtin">id</span><span class="token punctuation">(</span>points<span class="token punctuation">.</span>storage<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>points_t<span class="token punctuation">.</span>storage<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[32]:</span>
+<span class="token boolean">True</span>
+</code></pre>
+<p>&#x800C;&#x5B83;&#x4EEC;&#x7684;&#x533A;&#x522B;&#x53EA;&#x5728;&#x4E8E;&#x5F62;&#x72B6;&#x548C;&#x6B65;&#x957F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[33]:</span>
+points<span class="token punctuation">.</span>stride<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[33]:</span>
+<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token comment"># In[34]:</span>
+points_t<span class="token punctuation">.</span>stride<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[34]:</span>
+<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#xFF0C;&#x4EE5;&#x70B9;&#x4E3A;&#x5355;&#x4F4D;&#x589E;&#x52A0;&#x7B2C;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;--&#x4F8B;&#x5982;&#xFF0C;&#x4ECE;&#x70B9;[0,0]&#x5230;&#x70B9;[1,0]--&#x5C06;&#x6CBF;&#x5B58;&#x50A8;&#x8DF3;&#x8FC7;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x589E;&#x52A0;&#x7B2C;&#x4E8C;&#x4E2A;&#x7D22;&#x5F15;--&#x4ECE;&#x70B9;[0,0]&#x5230;&#x70B9;[0,1]--&#x5C06;&#x6CBF;&#x5B58;&#x50A8;&#x8DF3;&#x8FC7;&#x4E00;&#x4E2A;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x6309;&#x987A;&#x5E8F;&#x9010;&#x884C;&#x5B58;&#x653E;&#x5F20;&#x91CF;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x8FD9;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#xFF0C;&#x5728;<code>points</code>&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x589E;&#x52A0;1&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x4ECE;<code>points[0,0]</code>&#x5230;<code>points[1,0]</code>--&#x5C06;&#x6CBF;&#x7740;&#x5B58;&#x50A8;&#x8DF3;&#x8FC7;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x589E;&#x52A0;&#x7B2C;&#x4E8C;&#x4E2A;&#x7D22;&#x5F15;&#xFF1A;&#x4ECE;<code>points[0,0]</code>&#x5230;<code>points[0,1]</code>--&#x5C06;&#x6CBF;&#x5B58;&#x50A8;&#x8DF3;&#x8FC7;1&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x6309;&#x987A;&#x5E8F;&#x9010;&#x884C;&#x5B58;&#x653E;&#x5F20;&#x91CF;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;<code>points</code>&#x8F6C;&#x7F6E;&#x4E3A;<code>points_t</code>&#xFF0C;&#x5982;&#x56FE;3.6&#x6240;&#x793A;&#x3002;&#x6211;&#x4EEC;&#x5148;&#x6539;&#x53D8;&#x6B65;&#x957F;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x987A;&#x5E8F;&#x3002;&#x4E4B;&#x540E;&#xFF0C;&#x589E;&#x52A0;&#x884C;&#xFF08;&#x5F20;&#x91CF;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#xFF09;&#x5C06;&#x6CBF;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x8DF3;&#x8FC7;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5C31;&#x50CF;&#x6211;&#x4EEC;&#x6CBF;<code>points</code>&#x7684;&#x5217;&#x79FB;&#x52A8;&#x65F6;&#x4E00;&#x6837;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x8F6C;&#x7F6E;&#x7684;&#x5B9A;&#x4E49;&#x3002;&#x6CA1;&#x6709;&#x5206;&#x914D;&#x65B0;&#x7684;&#x5185;&#x5B58;&#xFF1A;&#x4EC5;&#x901A;&#x8FC7;&#x521B;&#x5EFA;&#x6B65;&#x957F;&#x987A;&#x5E8F;&#x4E0E;&#x539F;&#x59CB;&#x987A;&#x5E8F;&#x4E0D;&#x540C;&#x7684;&#x65B0;<code>Tensor</code>&#x5B9E;&#x4F8B;&#x6765;&#x83B7;&#x5F97;&#x8F6C;&#x7F6E;&#x3002;</p>
+<center>&#x56FE;3.6 &#x5BF9;&#x5F20;&#x91CF;&#x8FDB;&#x884C;&#x8F6C;&#x7F6E;&#x64CD;&#x4F5C;</center>
+
+<div align="center">
+<img src="../img/Chap3/3-6.png">
+</div>
+
+<h3 id="383-&#x5728;&#x66F4;&#x9AD8;&#x7684;&#x7EF4;&#x5EA6;&#x4E0A;&#x8FDB;&#x884C;&#x8F6C;&#x7F6E;"><a name="383-&#x5728;&#x66F4;&#x9AD8;&#x7684;&#x7EF4;&#x5EA6;&#x4E0A;&#x8FDB;&#x884C;&#x8F6C;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#383-&#x5728;&#x66F4;&#x9AD8;&#x7684;&#x7EF4;&#x5EA6;&#x4E0A;&#x8FDB;&#x884C;&#x8F6C;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>3.8.3 &#x5728;&#x66F4;&#x9AD8;&#x7684;&#x7EF4;&#x5EA6;&#x4E0A;&#x8FDB;&#x884C;&#x8F6C;&#x7F6E;</h3>
+<p>PyTorch&#x4E2D;&#x7684;&#x8F6C;&#x7F6E;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;&#x77E9;&#x9635;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x4E24;&#x4E2A;&#x7EF4;&#x5EA6;&#x6765;&#x8FDB;&#x884C;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x8F6C;&#x7F6E;&#xFF08;&#x7FFB;&#x8F6C;&#x5F62;&#x72B6;&#x548C;&#x6B65;&#x957F;&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[35]:</span>
+some_t <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+transpose_t <span class="token operator">=</span> some_t<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+some_t<span class="token punctuation">.</span>shape
+
+<span class="token comment"># Out[35]:</span>
+torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[36]:</span>
+transpose_t<span class="token punctuation">.</span>shape
+
+<span class="token comment"># Out[36]:</span>
+torch<span class="token punctuation">.</span>Size<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[37]:</span>
+some_t<span class="token punctuation">.</span>stride<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[37]:</span>
+<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[38]:</span>
+transpose_t<span class="token punctuation">.</span>stride<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[38]:</span>
+<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x5F20;&#x91CF;&#x7684;&#x503C;&#x5728;&#x5B58;&#x50A8;&#x4E2D;&#x4ECE;&#x6700;&#x53F3;&#x8FB9;&#x7684;&#x7EF4;&#x5EA6;&#x5F00;&#x59CB;&#x6392;&#x5217;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x5F20;&#x91CF;&#x6765;&#x8BF4;&#xFF0C;&#x6CBF;&#x7740;&#x884C;&#x79FB;&#x52A8;&#xFF09;&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x8FDE;&#x7EED;(<code>contiguous</code>)&#x7684;&#x3002;&#x8FDE;&#x7EED;&#x5F20;&#x91CF;&#x5F88;&#x65B9;&#x4FBF;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6309;&#x987A;&#x5E8F;&#x9AD8;&#x6548;&#x8BBF;&#x95EE;&#x5B83;&#x4EEC;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x5B58;&#x50A8;&#x4E2D;&#x8DF3;&#x6765;&#x8DF3;&#x53BB;&#xFF08;&#x7531;&#x4E8E;&#x73B0;&#x4EE3;CPU&#x4E0A;&#x7684;&#x5185;&#x5B58;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#xFF0C;&#x63D0;&#x9AD8;&#x6570;&#x636E;&#x7684;&#x4F4D;&#x7F6E;&#x6027;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#xFF09;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F18;&#x52BF;&#x53D6;&#x51B3;&#x4E8E;&#x7B97;&#x6CD5;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<h3 id="384-&#x8FDE;&#x7EED;&#x5F20;&#x91CF;&#xFF08;contiguous-tensors&#xFF09;"><a name="384-&#x8FDE;&#x7EED;&#x5F20;&#x91CF;&#xFF08;contiguous-tensors&#xFF09;" class="anchor-navigation-ex-anchor" href="#384-&#x8FDE;&#x7EED;&#x5F20;&#x91CF;&#xFF08;contiguous-tensors&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>3.8.4 &#x8FDE;&#x7EED;&#x5F20;&#x91CF;&#xFF08;contiguous tensors&#xFF09;</h3>
+<p>PyTorch &#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5F20;&#x91CF;&#x64CD;&#x4F5C;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x8FDE;&#x7EED;&#x7684;&#x5F20;&#x91CF;&#xFF0C;&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x4E2D;&#x9047;&#x5230;&#x7684;<code>view</code>&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;PyTorch&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x4FE1;&#x606F;&#x5F02;&#x5E38;&#xFF0C;&#x5E76;&#x8981;&#x6C42;&#x6211;&#x4EEC;&#x663E;&#x5F0F;&#x8C03;&#x7528;<code>contiguous</code>&#x3002;&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x5F20;&#x91CF;&#x5DF2;&#x7ECF;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x8C03;&#x7528;<code>contiguous</code>&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x4F5C;&#x7528;&#xFF08;&#x4E5F;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x6027;&#x80FD;&#xFF09;&#x3002;</p>
+<p>&#x5728;&#x6211;&#x4EEC;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;<code>points</code>&#x662F;&#x8FDE;&#x7EED;&#x7684;&#xFF0C;&#x800C;&#x5B83;&#x7684;&#x8F6C;&#x7F6E;&#x4E0D;&#x662F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[39]:</span>
+points<span class="token punctuation">.</span>is_contiguous<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[39]:</span>
+<span class="token boolean">True</span>
+
+<span class="token comment"># In[40]:</span>
+points_t<span class="token punctuation">.</span>is_contiguous<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[40]:</span>
+<span class="token boolean">False</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;<code>contiguous</code>&#x65B9;&#x6CD5;&#x4ECE;&#x4E00;&#x4E2A;&#x975E;&#x8FDE;&#x7EED;&#x7684;&#x5F20;&#x91CF;&#x4E2D;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8FDE;&#x7EED;&#x5F20;&#x91CF;&#x3002;&#x5F20;&#x91CF;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x53D8;&#xFF0C;&#x4F46;&#x6B65;&#x957F;&#x4F1A;&#x6539;&#x53D8;&#xFF0C;&#x5B58;&#x50A8;&#x4E5F;&#x4F1A;&#x6539;&#x53D8;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># In[41]:</span>
+points <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+points_t <span class="token operator">=</span> points<span class="token punctuation">.</span>t<span class="token punctuation">(</span><span class="token punctuation">)</span>
+points_t
+
+<span class="token comment"># Out[41]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[42]:</span>
+points_t<span class="token punctuation">.</span>storage<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[42]:</span>
+ <span class="token number">4.0</span>
+ <span class="token number">1.0</span>
+ <span class="token number">5.0</span>
+ <span class="token number">3.0</span>
+ <span class="token number">2.0</span>
+ <span class="token number">1.0</span>
+<span class="token punctuation">[</span>torch<span class="token punctuation">.</span>FloatStorage of size <span class="token number">6</span><span class="token punctuation">]</span>
+
+<span class="token comment"># In[43]:</span>
+points_t<span class="token punctuation">.</span>stride<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[43]:</span>
+<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[44]:</span>
+points_t_cont <span class="token operator">=</span> points_t<span class="token punctuation">.</span>contiguous<span class="token punctuation">(</span><span class="token punctuation">)</span>
+points_t_cont
+
+<span class="token comment"># Out[44]:</span>
+tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[45]:</span>
+points_t_cont<span class="token punctuation">.</span>stride<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[45]:</span>
+<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># In[46]:</span>
+points_t_cont<span class="token punctuation">.</span>storage<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Out[46]:</span>
+ <span class="token number">4.0</span>
+ <span class="token number">5.0</span>
+ <span class="token number">2.0</span>
+ <span class="token number">1.0</span>
+ <span class="token number">3.0</span>
+ <span class="token number">1.0</span>
+<span class="token punctuation">[</span>torch<span class="token punctuation">.</span>FloatStorage of size <span class="token number">6</span><span class="token punctuation">]</span>
+</code></pre>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x73B0;&#x5728;&#x5DF2;&#x7ECF;&#x5BF9;&#x5B58;&#x50A8;&#x8FDB;&#x884C;&#x4E86;reshuffled&#x64CD;&#x4F5C;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x65B0;&#x5B58;&#x50A8;&#x4E2D;&#x9010;&#x884C;&#x5E03;&#x7F6E;&#x5143;&#x7D20;&#x3002;&#x6B65;&#x957F;&#x5DF2;&#x66F4;&#x6539;&#x4EE5;&#x53CD;&#x6620;&#x65B0;&#x7684;&#x5B58;&#x50A8;&#x5E03;&#x5C40;&#x3002;</p>
+<p>&#x4F5C;&#x4E3A;&#x56DE;&#x987E;&#xFF0C;&#x56FE;3.7&#x518D;&#x6B21;&#x663E;&#x793A;&#x4E86;&#x6211;&#x4EEC;&#x7684;&#x56FE;&#x3002;&#x5E0C;&#x671B;&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5BF9;&#x5F20;&#x91CF;&#x7684;&#x6784;&#x5EFA;&#x65B9;&#x5F0F;&#x6709;&#x4E86;&#x5F88;&#x597D;&#x7684;&#x4E86;&#x89E3;&#x3002;</p>
+<center>&#x56FE;3.7 &#x5F20;&#x91CF;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x5927;&#x5C0F;&#x548C;&#x6B65;&#x957F;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x3002;&#x5F20;&#x91CF;&#x5728;&#x8FD9;&#x91CC;&#x662F;&#x8F83;&#x5927;&#x5B58;&#x50A8;&#x7684;&#x89C6;&#x56FE;&#xFF0C;&#x5C31;&#x50CF;&#x5728;&#x521B;&#x5EFA;&#x8F83;&#x5927;&#x5F20;&#x91CF;&#x65F6;&#x53EF;&#x80FD;&#x5DF2;&#x5206;&#x914D;&#x7684;&#x5B58;&#x50A8;&#x90A3;&#x6837;</center>
+
+<div align="center">
+<img src="../img/Chap3/3-7.png">
+</div>
+
+<h2 id="39-&#x79FB;&#x52A8;&#x5F20;&#x91CF;&#x81F3;gpu"><a name="39-&#x79FB;&#x52A8;&#x5F20;&#x91CF;&#x81F3;gpu" class="anchor-navigation-ex-anchor" href="#39-&#x79FB;&#x52A8;&#x5F20;&#x91CF;&#x81F3;gpu"><i class="fa fa-link" aria-hidden="true"></i></a>3.9 <span id="chap3-9">&#x79FB;&#x52A8;&#x5F20;&#x91CF;&#x81F3;GPU</span></h2>
+<p>&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x8C08;&#x8BBA;&#x5B58;&#x50A8;&#x65F6;&#xFF0C;&#x662F;&#x6307;CPU&#x4E0A;&#x7684;&#x5185;&#x5B58;&#x3002; PyTorch&#x5F20;&#x91CF;&#x4E5F;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x5728;&#x53E6;&#x4E00;&#x79CD;&#x5904;&#x7406;&#x5668;&#x4E0A;&#xFF1A;&#x56FE;&#x5F62;&#x5904;&#x7406;&#x5355;&#x5143;&#xFF08;GPU&#xFF09;&#x3002;&#x6BCF;&#x4E2A;PyTorch&#x5F20;&#x91CF;&#x90FD;&#x53EF;&#x4EE5;&#x4F20;&#x8F93;&#x5230;GPU&#x4E2D;&#xFF0C;&#x4EE5;&#x4FBF;&#x6267;&#x884C;&#x5927;&#x89C4;&#x6A21;&#x7684;&#x5E76;&#x884C;&#x5FEB;&#x901F;&#x8BA1;&#x7B97;&#x3002;&#x5BF9;&#x5F20;&#x91CF;&#x8FDB;&#x884C;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x90FD;&#x5C06;&#x4F7F;&#x7528;PyTorch&#x9644;&#x5E26;&#x7684;GPU&#x4E13;&#x7528;&#x4F8B;&#x7A0B;&#x6765;&#x6267;&#x884C;&#x3002;</p>
+<h2 id="310-numpy&#x4E92;&#x64CD;&#x4F5C;&#x6027;"><a name="310-numpy&#x4E92;&#x64CD;&#x4F5C;&#x6027;" class="anchor-navigation-ex-anchor" href="#310-numpy&#x4E92;&#x64CD;&#x4F5C;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>3.10 <span id="chap3-10">NumPy&#x4E92;&#x64CD;&#x4F5C;&#x6027;</span></h2>
+<h2 id="311-&#x5E7F;&#x4E49;&#x5F20;&#x91CF;&#x4E5F;&#x662F;&#x5F20;&#x91CF;"><a name="311-&#x5E7F;&#x4E49;&#x5F20;&#x91CF;&#x4E5F;&#x662F;&#x5F20;&#x91CF;" class="anchor-navigation-ex-anchor" href="#311-&#x5E7F;&#x4E49;&#x5F20;&#x91CF;&#x4E5F;&#x662F;&#x5F20;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>3.11 <span id="chap3-11">&#x5E7F;&#x4E49;&#x5F20;&#x91CF;&#x4E5F;&#x662F;&#x5F20;&#x91CF;</span></h2>
+<h2 id="312-&#x5E8F;&#x5217;&#x5316;&#x5F20;&#x91CF;"><a name="312-&#x5E8F;&#x5217;&#x5316;&#x5F20;&#x91CF;" class="anchor-navigation-ex-anchor" href="#312-&#x5E8F;&#x5217;&#x5316;&#x5F20;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>3.12 <span id="chap3-12">&#x5E8F;&#x5217;&#x5316;&#x5F20;&#x91CF;</span></h2>
+<h2 id="313-&#x7ED3;&#x8BBA;"><a name="313-&#x7ED3;&#x8BBA;" class="anchor-navigation-ex-anchor" href="#313-&#x7ED3;&#x8BBA;"><i class="fa fa-link" aria-hidden="true"></i></a>3.13 <span id="chap3-13">&#x7ED3;&#x8BBA;</span></h2>
+<h2 id="314-&#x7EC3;&#x4E60;"><a name="314-&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#314-&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>3.14 <span id="chap3-14">&#x7EC3;&#x4E60;</span></h2>
+<h2 id="315-&#x5C0F;&#x7ED3;"><a name="315-&#x5C0F;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#315-&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>3.15 <span id="chap3-15">&#x5C0F;&#x7ED3;</span></h2>
+<hr>
+<p><span id="jump3-1"><sup>1</sup></span> &#x7531;&#x4E8E;&#x611F;&#x77E5;&#x5E76;&#x975E;&#x6BEB;&#x65E0;&#x610F;&#x4E49;&#xFF0C;&#x4EBA;&#x4EEC;&#x63D0;&#x51FA;&#x4E86;&#x8BB8;&#x591A;&#x8861;&#x91CF;&#x7684;&#x6807;&#x51C6;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1;&#xFF1A;<a href="https://en.wikipedia.org/wiki/Luma_(video" target="_blank">https://en.wikipedia.org/wiki/Luma_(video</a>) .</p>
+<p><span id="jump3-2"><sup>2</sup></span> &#x8482;&#x59C6;&#xB7;&#x7F57;&#x514B;&#x5854;&#x820D;&#x5C14;(TimRockt&#xE4;schel)&#x7684;&#x535A;&#x5BA2;&#x6587;&#x7AE0;&#x201C;Einsum is All You Need&#x2014;Einstein Summation in Deep Learning&#x201D; (<a href="https://rockt.github.io/2018/04/30/einsum" target="_blank">https://rockt.github.io/2018/04/30/einsum</a>) &#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x597D;&#x7684;&#x6982;&#x8FF0;&#x3002;</p>
+<p><span id="jump3-3"><sup>3</sup></span> See Sasha Rush, &#x201C;Tensor Considered Harmful,&#x201D; Harvardnlp, <a href="http://nlp.seas.harvard.edu/NamedTensor" target="_blank">http://nlp.seas.harvard.edu/NamedTensor</a>.</p>
+<p><span id="jump3-4"><sup>4</sup></span></p>
+<p><span id="jump3-5"><sup>5</sup></span></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/paper2Fox" target="_blank">paper2Fox</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2020-12-25 15:20:22 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Chapter2/2.1.html#chap2-7" class="navigation navigation-prev " aria-label="Previous page: 2.7 小结">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.1.html#chap3-1" class="navigation navigation-next " aria-label="Next page: 3.1 浮点数世界">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3. 从张量开始","level":"1.8","depth":1,"next":{"title":"3.1 浮点数世界","level":"1.8.1","depth":2,"anchor":"#chap3-1","path":"Chapter3/3.1.md","ref":"./Chapter3/3.1.md#chap3-1","articles":[]},"previous":{"title":"2.7 小结","level":"1.7.7","depth":2,"anchor":"#chap2-7","path":"Chapter2/2.1.md","ref":"./Chapter2/2.1.md#chap2-7","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","github-buttons","ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","code","expandable-chapters-small","splitter","katex","auto-scroll-table"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-solarizedlight.css"]},"todo":{},"page-footer-ex":{"copyright":"By [paper2Fox](https://github.com/paper2Fox)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"auto-scroll-table":{},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"paper2Fox","repo":"Deep-Learning-with-PyTorch-Chinese","type":["star","watch","fork"],"size":"large","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-131910384-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"译者：paper2Fox","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"深度学习与PyTorch（中文版）","bib":[],"gitbook":"*"},"file":{"path":"Chapter3/3.1.md","mtime":"2020-12-25T15:20:22.001Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-25T15:21:06.584Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

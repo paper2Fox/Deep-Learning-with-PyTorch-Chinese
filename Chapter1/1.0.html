@@ -1,0 +1,776 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Part 1 核心PyTorch · 深度学习与PyTorch（中文版）</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="译者：paper2Fox">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1.1.html" />
+    
+    
+    <link rel="prev" href="../about/about_the_cover_illustration.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"paper2Fox","repo":"Deep-Learning-with-PyTorch-Chinese","type":["star","watch","fork"],"size":"large","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../about/about_this_book.html">
+            
+                <a href="../about/about_this_book.html">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../about/about_the_authors.html">
+            
+                <a href="../about/about_the_authors.html">
+            
+                    
+                    关于作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../about/about_the_cover_illustration.html">
+            
+                <a href="../about/about_the_cover_illustration.html">
+            
+                    
+                    关于封面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="1.0.html">
+            
+                <a href="1.0.html">
+            
+                    
+                    Part 1 核心PyTorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="1.1.html">
+            
+                <a href="1.1.html">
+            
+                    
+                    1. 深度学习和PyTorch库简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="1.1.html">
+            
+                <a href="1.1.html#chap1-1">
+            
+                    
+                    1.1 深度学习革命
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="1.1.html">
+            
+                <a href="1.1.html#chap1-2">
+            
+                    
+                    1.2 深度学习：PyTorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="1.1.html">
+            
+                <a href="1.1.html#chap1-3">
+            
+                    
+                    1.3 为什么使用深度学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="1.1.html">
+            
+                <a href="1.1.html#chap1-4">
+            
+                    
+                    1.4 概述PyTorch如何支持深度学习项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="1.1.html">
+            
+                <a href="1.1.html#chap1-5">
+            
+                    
+                    1.5 硬件和软件要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="1.1.html">
+            
+                <a href="1.1.html#chap1-6">
+            
+                    
+                    1.6 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="1.1.html">
+            
+                <a href="1.1.html#chap1-7">
+            
+                    
+                    1.7 小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html">
+            
+                    
+                    2. 预训练网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-1">
+            
+                    
+                    2.1 一种可识别图像主体的预训练网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-2">
+            
+                    
+                    2.2 一种从伪到真的预训练模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-3">
+            
+                    
+                    2.3 一种描述场景的预训练网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-4">
+            
+                    
+                    2.4 Torch Hub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-5">
+            
+                    
+                    2.5 结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-6">
+            
+                    
+                    2.6 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Chapter2/2.1.html">
+            
+                <a href="../Chapter2/2.1.html#chap2-7">
+            
+                    
+                    2.7 小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html">
+            
+                    
+                    3. 从张量开始
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-1">
+            
+                    
+                    3.1 浮点数世界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-2">
+            
+                    
+                    3.2 张量：多维数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-3">
+            
+                    
+                    3.3 索引张量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-4">
+            
+                    
+                    3.4 命名张量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-5">
+            
+                    
+                    3.5 张量元素类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-6">
+            
+                    
+                    3.6 张量API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-7">
+            
+                    
+                    3.7 张量：存储的风景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-8">
+            
+                    
+                    3.8 张量元数据：尺寸、偏移和步长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-9">
+            
+                    
+                    3.9 移动张量至GPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-10">
+            
+                    
+                    3.10 NumPy互操作性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-11">
+            
+                    
+                    3.11 广义张量也是张量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-12">
+            
+                    
+                    3.12 序列化张量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-13">
+            
+                    
+                    3.13 结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-14">
+            
+                    
+                    3.14 练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../Chapter3/3.1.html">
+            
+                <a href="../Chapter3/3.1.html#chap3-15">
+            
+                    
+                    3.15 小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Part 1 核心PyTorch</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#part-1"><b></b>Part 1</a></li><li><span class="title-icon "></span><a href="#&#x6838;&#x5FC3;pytorch"><b></b>&#x6838;&#x5FC3;PyTorch</a></li></ul></div><a href="#part-1" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="part-1"><a name="part-1" class="anchor-navigation-ex-anchor" href="#part-1"><i class="fa fa-link" aria-hidden="true"></i></a><i><p align="right">Part 1</p></i></h1>
+<h1 id="&#x6838;&#x5FC3;pytorch"><a name="&#x6838;&#x5FC3;pytorch" class="anchor-navigation-ex-anchor" href="#&#x6838;&#x5FC3;pytorch"><i class="fa fa-link" aria-hidden="true"></i></a><p align="right">&#x6838;&#x5FC3;PyTorch</p></h1>
+<p>&#x2003;&#x2003;&#x6B22;&#x8FCE;&#x9605;&#x8BFB;&#x672C;&#x4E66;&#x7684;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x4F7F;&#x7528;PyTorch&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x83B7;&#x5F97;&#x7406;&#x89E3;&#x5176;&#x5256;&#x6790;&#x7ED3;&#x6784;&#x548C;&#x89E3;&#x51B3;PyTorch&#x9879;&#x76EE;&#x673A;&#x5236;&#x6240;&#x9700;&#x7684;&#x57FA;&#x672C;&#x6280;&#x80FD;&#x3002;</p>
+<p>&#x2003;&#x2003;&#x5728;&#x7B2C;1&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x9996;&#x6B21;&#x63A5;&#x89E6;PyTorch&#xFF0C;&#x4E86;&#x89E3;&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5B83;&#x80FD;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x4E0E;&#x5176;&#x4ED6;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x6846;&#x67B6;&#x7684;&#x5173;&#x7CFB;&#x3002;&#x7B2C;2&#x7AE0;&#x5C06;&#x5F15;&#x5BFC;&#x6211;&#x4EEC;&#x4E86;&#x89E3;&#x5168;&#x8C8C;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x6709;&#x673A;&#x4F1A;&#x73A9;&#x73A9;&#x90A3;&#x4E9B;&#x5DF2;&#x7ECF;&#x9884;&#x5148;&#x8BAD;&#x7EC3;&#x597D;&#x7684;&#x6709;&#x8DA3;&#x4EFB;&#x52A1;&#x7684;&#x6A21;&#x578B;&#x3002;&#x7B2C;3&#x7AE0;&#x7684;&#x5185;&#x5BB9;&#x7A0D;&#x5FAE;&#x4E25;&#x8083;&#x4E00;&#x4E9B;&#xFF0C;&#x8BB2;&#x6388;PyTorch&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1A;&#x5F20;&#x91CF;&#x3002;&#x7B2C;4&#x7AE0;&#x5C06;&#x5E26;&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x53E6;&#x4E00;&#x6B21;&#x6F2B;&#x6E38;&#xFF0C;&#x8FD9;&#x4E00;&#x6B21;&#x5C06;&#x8BB2;&#x8FF0;&#x6765;&#x81EA;&#x4E0D;&#x540C;&#x9886;&#x57DF;&#x7684;&#x6570;&#x636E;&#x8868;&#x793A;&#x4E3A;PyTorch&#x5F20;&#x91CF;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x7B2C;5&#x7AE0;&#x63ED;&#x793A;&#x4E86;&#x7A0B;&#x5E8F;&#x5982;&#x4F55;&#x4ECE;&#x793A;&#x4F8B;&#x4E2D;&#x5B66;&#x4E60;&#xFF0C;&#x4EE5;&#x53CA;PyTorch&#x662F;&#x5982;&#x4F55;&#x652F;&#x6301;&#x8FD9;&#x4E00;&#x8FC7;&#x7A0B;&#x7684;&#x3002;&#x7B2C;6&#x7AE0;&#x4ECB;&#x7ECD;&#x4E86;&#x4EC0;&#x4E48;&#x662F;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x4F7F;&#x7528;PyTorch&#x6784;&#x5EFA;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x3002;&#x7B2C;7&#x7AE0;&#x4F7F;&#x7528;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x67B6;&#x6784;&#x89E3;&#x51B3;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x56FE;&#x50CF;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x7B2C;8&#x7AE0;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5377;&#x79EF;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4EE5;&#x66F4;&#x667A;&#x80FD;&#x7684;&#x65B9;&#x5F0F;&#x89E3;&#x51B3;&#x540C;&#x6837;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x2003;&#x2003;&#x5728;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x7ED3;&#x675F;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x5728;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x4E2D;&#x4F7F;&#x7528;PyTorch&#x89E3;&#x51B3;&#x5B9E;&#x9645;&#x95EE;&#x9898;&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/paper2Fox" target="_blank">paper2Fox</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2020-12-25 15:20:22 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../about/about_the_cover_illustration.html" class="navigation navigation-prev " aria-label="Previous page: 关于封面">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="1.1.html" class="navigation navigation-next " aria-label="Next page: 1. 深度学习和PyTorch库简介">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Part 1 核心PyTorch","level":"1.5","depth":1,"next":{"title":"1. 深度学习和PyTorch库简介","level":"1.6","depth":1,"path":"Chapter1/1.1.md","ref":"./Chapter1/1.1.md","articles":[{"title":"1.1 深度学习革命","level":"1.6.1","depth":2,"anchor":"#chap1-1","path":"Chapter1/1.1.md","ref":"./Chapter1/1.1.md#chap1-1","articles":[]},{"title":"1.2 深度学习：PyTorch","level":"1.6.2","depth":2,"anchor":"#chap1-2","path":"Chapter1/1.1.md","ref":"./Chapter1/1.1.md#chap1-2","articles":[]},{"title":"1.3 为什么使用深度学习","level":"1.6.3","depth":2,"anchor":"#chap1-3","path":"Chapter1/1.1.md","ref":"./Chapter1/1.1.md#chap1-3","articles":[]},{"title":"1.4 概述PyTorch如何支持深度学习项目","level":"1.6.4","depth":2,"anchor":"#chap1-4","path":"Chapter1/1.1.md","ref":"./Chapter1/1.1.md#chap1-4","articles":[]},{"title":"1.5 硬件和软件要求","level":"1.6.5","depth":2,"anchor":"#chap1-5","path":"Chapter1/1.1.md","ref":"./Chapter1/1.1.md#chap1-5","articles":[]},{"title":"1.6 练习","level":"1.6.6","depth":2,"anchor":"#chap1-6","path":"Chapter1/1.1.md","ref":"./Chapter1/1.1.md#chap1-6","articles":[]},{"title":"1.7 小结","level":"1.6.7","depth":2,"anchor":"#chap1-7","path":"Chapter1/1.1.md","ref":"./Chapter1/1.1.md#chap1-7","articles":[]}]},"previous":{"title":"关于封面","level":"1.4","depth":1,"path":"about/about_the_cover_illustration.md","ref":"about/about_the_cover_illustration.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","github-buttons","ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","code","expandable-chapters-small","splitter","katex","auto-scroll-table"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-solarizedlight.css"]},"todo":{},"page-footer-ex":{"copyright":"By [paper2Fox](https://github.com/paper2Fox)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"auto-scroll-table":{},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"paper2Fox","repo":"Deep-Learning-with-PyTorch-Chinese","type":["star","watch","fork"],"size":"large","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-131910384-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"译者：paper2Fox","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"深度学习与PyTorch（中文版）","bib":[],"gitbook":"*"},"file":{"path":"Chapter1/1.0.md","mtime":"2020-12-25T15:20:22.001Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-25T15:21:06.584Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
